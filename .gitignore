@@ -34,3 +34,6 @@
 /build/
 
 # Composer PHAR
+app/cache/dev/profiler/index.csv
+app/logs/dev.log
+*.log
