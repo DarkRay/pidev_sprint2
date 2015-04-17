@@ -1,0 +1,4 @@
+services:
+#    sprint2_authandlog.example:
+#        class: sprint2\AuthandlogBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

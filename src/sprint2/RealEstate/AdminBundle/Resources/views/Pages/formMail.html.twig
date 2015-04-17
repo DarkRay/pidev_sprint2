@@ -1,0 +1,60 @@
+{% extends "sprint2RealEstateAdminBundle::admin_layout.html.twig" %}
+    {% block Image %}
+        <img src="{{ image }}" class="img-circle" alt="User Image" />
+    {% endblock %}
+    {% block Image1 %}
+        <img src="{{ image }}" class="user-image" alt="User Image"/>     
+    {% endblock %}
+    {% block Image2 %}
+    <img src="{{ image }}" class="img-circle" alt="User Image" />
+    {% endblock %}
+    {% block ContactActive %}
+        class="active treeview"
+    {% endblock %}
+    {% block MailboxEtra %}
+        <small class="label pull-right bg-yellow">{{countmail4}}</small>
+    {% endblock %}
+    {% block ContactCore %}
+       
+       <section class="content">
+        <div class="row">
+            
+              <!-- USERS Offre -->
+              <div class="col-md-12">
+                <ul class="offre-list">
+                                     
+                        <li style="list-style-type: none; margin-left: 200px" >
+                            <div class="small-box bg-gray-active text-black" >
+                                <div class="inner">
+<html>
+    <body>     
+    <h2> <strong> Contact</strong> </h2> 
+    <hr>  <br/>
+   
+    <form action="{{ path('sprint2_real_estate_admin_sendMail') }}" method="POST" >
+        <strong>Subject :</strong><br/>
+       <input type="text" name="Subject" class="label-new"> <br/><br/>
+       </br><strong>Email : </strong><br/>
+    <input type="text" name="email" class="label-new">
+    </br><br/></br>
+    <strong> Text : </strong><br/>
+    <textarea type="text" name="message" class="label-new"></textarea>
+    <br/>
+    <br/>
+    <input type="submit" name="send" class="btn-facebook"/>
+    <br/><br/>
+    </form>
+    </body> 
+</html>
+
+  </div>
+
+                                
+                            </div>
+                        </li>
+                    
+                </ul>
+              </div>
+        </div>
+       </section>       
+    {% endblock %}

@@ -1,0 +1,66 @@
+<?php
+
+namespace sprint2\GerantBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Boitemessages
+ *
+ * @ORM\Table(name="boitemessages", indexes={@ORM\Index(name="id_destinataire", columns={"id_destinataire"}), @ORM\Index(name="id_expediteur", columns={"id_expediteur"})})
+ * @ORM\Entity
+ */
+class Boitemessages
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="contenu", type="string", length=500, nullable=false)
+     */
+    private $contenu;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="vu", type="integer", nullable=true)
+     */
+    private $vu = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="temps_envoi", type="datetime", nullable=true)
+     */
+    private $tempsEnvoi = 'CURRENT_TIMESTAMP';
+
+    /**
+     * @var \Utilisateur
+     *
+     * @ORM\ManyToOne(targetEntity="Utilisateur")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="id_destinataire", referencedColumnName="id")
+     * })
+     */
+    private $idDestinataire;
+
+    /**
+     * @var \Utilisateur
+     *
+     * @ORM\ManyToOne(targetEntity="Utilisateur")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="id_expediteur", referencedColumnName="id")
+     * })
+     */
+    private $idExpediteur;
+
+
+}

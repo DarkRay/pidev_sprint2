@@ -1,0 +1,117 @@
+{% extends "sprint2GerantBundle:Default:index.html.twig" %}
+
+{% block head %}
+    <title>Publier une offre</title>
+    <script src="{{ asset('js/checkbox.js')}}"></script>
+    <script>
+        $(document).ready(function() {
+            $('.checkbox').checkbox('attach events', '.toggle.button');
+        });
+    </script>
+{%  endblock head %}
+
+{% block menu %}
+    <a class="item"  href="{{ path('sprint2_gerant_homepage',{ 'id': gerant.id }) }}">
+        <i class="home icon"></i> Accueil
+    </a>
+    <a class="item"  href="{{ path('sprint2_gerant_mail',{ 'id': gerant.id }) }}">
+        <i class="mail icon"></i> Messages
+    </a>
+    <a class="item"  href="{{ path('sprint2_gerant_listeoffres',{ 'id': gerant.id }) }}">
+        <i class="list layout icon"></i> Liste des offres
+    </a>
+{% endblock menu %}
+
+{% block body %}
+    <div class="ui orange segment">
+        <form class="ui form" method="POST">
+            <h4 class="ui dividing header">Modifier une offre</h4>
+            <div class="field">
+                <div class="two fields">
+                    <div class="field">
+                        <div class="two fields">
+                            <div class="field">
+                                <label>Surface</label>
+                                <input type="text" name="surface" placeholder="Surface" value="{{ offre.surface }}">
+                            </div>
+                            <div class="field">
+                                <label>Prix</label>
+                                <input type="text" name="prix" placeholder="Prix" value="{{ offre.payement }}">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="two fields">
+                            <div class="field">
+                                <label>Nombre des pièces</label>
+                                <input type="text" name="nbrpieces" placeholder="Nombre des pièces" value="{{ offre.nbrpiece }}">
+                            </div>
+                            <div class="field">
+                                <label>Etage</label>
+                                <input type="text" name="etage" placeholder="Etage" value="{{ offre.etage }}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <label>Description</label>
+                <textarea>{{ offre.description }}</textarea>
+                <div class="ui divider"></div>
+                <div class="two fields">
+                    <div class="field">
+                        <div class="two fields">
+                            <div class="field">
+                                <label>Type</label>
+                                <select class="ui search dropdown" name="typeimmob">
+                                    <option>Studio</option>
+                                    <option>Appartement</option>
+                                    <option>Villa</option>
+                                    <option>Maison</option>
+                                </select>
+                            </div>
+                            <div class="field">
+                                <label>Nature</label>
+                                <select class="ui search dropdown"  name="nature">
+                                    <option>Location</option>
+                                    <option>Vente</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label>Etat</label>
+                        <select class="ui search dropdown" name="etat">
+                            <option>Bonne</option>
+                            <option>Moyenne</option>
+                            <option>Mauvaise</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="ui divider"></div>
+                <div class="ui toggle checkbox">
+                    <input type="checkbox" name="ascenceur" {% if offre.ascenceur == 1 %}checked {% endif %}>
+                    <label>Ascenceur</label>
+                </div>
+                <br/>
+                <br/>
+                <div class="ui toggle checkbox">
+                    <input type="checkbox" name="meuble" {% if offre.meuble == 1 %}checked {% endif %}>
+                    <label>Meublé</label>
+                </div>
+                <br/>
+                <br/>
+                <div class="ui toggle checkbox">
+                    <input type="checkbox" name="chauffage" {% if offre.chauffage == 1 %}checked {% endif %}>
+                    <label>Chauffage central</label>
+                </div>
+                <br/>
+                <br/>
+                <div class="ui toggle checkbox">
+                    <input type="checkbox" name="gaz" {% if offre.gazdeville == 1 %}checked {% endif %}>
+                    <label>Gaz de ville</label>
+                </div>
+
+            </div>
+                    <input type="submit" value="Modifier">
+        </form>
+    </div>
+{% endblock body %}

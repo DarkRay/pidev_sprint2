@@ -1,0 +1,15 @@
+
+
+sprint2_authandlog_login:
+    path:     /login/
+    defaults: { _controller: sprint2AuthandlogBundle:Default:login }
+
+sprint2_authandlog_logout:
+    path:     /logout/
+    defaults: { _controller: sprint2AuthandlogBundle:Default:logout }
+
+sprint2_authandlog_register:
+    path:     /register/
+    defaults: { _controller: sprint2AuthandlogBundle:Default:register }
+
+

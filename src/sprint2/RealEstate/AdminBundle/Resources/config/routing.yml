@@ -1,0 +1,132 @@
+sprint2_real_estate_admin_homepage:
+    path:     /
+    defaults: { _controller: sprint2RealEstateAdminBundle:Default:index }
+    
+sprint2_real_estate_admin_mailbox:
+    path:     /MailBox
+    defaults: { _controller: sprint2RealEstateAdminBundle:Default:mail }
+
+sprint2_real_estate_admin_sentmail:
+    path:     /SentMail
+    defaults: { _controller: sprint2RealEstateAdminBundle:Default:sent }
+    
+sprint2_real_estate_admin_clients:
+    path:     /Clients
+    defaults: { _controller: sprint2RealEstateAdminBundle:Default:clients }
+   
+sprint2_real_estate_admin_clients_supp:
+    path:     /Clients/{id}
+    defaults: { _controller: sprint2RealEstateAdminBundle:Default:supprimerUC }
+
+sprint2_real_estate_admin_gerants:
+    path:     /Gerants
+    defaults: { _controller: sprint2RealEstateAdminBundle:Default:gerants }
+
+sprint2_real_estate_admin_gerants_supp:
+    path:     /Gerants/{id}
+    defaults: { _controller: sprint2RealEstateAdminBundle:Default:supprimerUG }
+    
+sprint2_real_estate_admin_offres:
+    path:     /Offres
+    defaults: { _controller: sprint2RealEstateAdminBundle:Default:offres }
+    
+sprint2_real_estate_admin_agence:
+    path:     /Agences
+    defaults: { _controller: sprint2RealEstateAdminBundle:Default:agence }
+
+sprint2_real_estate_admin_agence_supp:
+    path:     /Agences/{id}
+    defaults: { _controller: sprint2RealEstateAdminBundle:Default:supprimerA }
+  
+sprint2_real_estate_admin_ajax_get_mail_list_ofclient:
+  pattern:  /ajax/{id}
+  defaults: { _controller: sprint2RealEstateAdminBundle:Ajax:getListOfMail }
+  
+sprint2_real_estate_admin_ajax_get_mail_list_of_inbox_admin:
+  pattern:  /ajax2/{id}
+  defaults: { _controller: sprint2RealEstateAdminBundle:Ajax:getInboxListOfMail }
+
+sprint2_real_estate_admin_ajax_dell_one_mail_of_inbox_admin:
+  pattern:  /ajax2/{id}/{idp}
+  defaults: { _controller: sprint2RealEstateAdminBundle:Ajax:dellInboxOneMail }
+  
+sprint2_real_estate_admin_ajax_find_list_of_mail_of_inbox_admin:
+  pattern:  /ajax3/{id}/{find}
+  defaults: { _controller: sprint2RealEstateAdminBundle:Ajax:findListOfMail }
+  
+sprint2_real_estate_admin_ajax_find_list1_of_mail_of_inbox_admin:
+  pattern:  /ajax3/{id}/
+  defaults: { _controller: sprint2RealEstateAdminBundle:Ajax:getInboxListOfMail }
+  
+sprint2_real_estate_admin_ajax_find_one_mail_of_inbox_admin:
+  pattern:  /ajax4/{id}/
+  defaults: { _controller: sprint2RealEstateAdminBundle:Ajax:getInboxOneMail }
+  
+file_file_homepage:
+    pattern:  /upload
+    defaults: { _controller: sprint2RealEstateAdminBundle:Default:upload }
+    
+login_homepage:
+    pattern:  /Login
+    defaults: { _controller: sprint2RealEstateAdminBundle:Default:login }
+    
+logout_homepage:
+    pattern:  /logout
+    defaults: { _controller: sprint2RealEstateAdminBundle:Default:logout }
+    
+sprint2_real_estate_admin_ajax_get_mail_list_of_inboxS_admin:
+  pattern:  /ajax5/{id}
+  defaults: { _controller: sprint2RealEstateAdminBundle:Ajax:getInboxListOfMailS }
+  
+Archive_ajouter:
+    path:     /ajouterArchive
+    defaults: { _controller: sprint2RealEstateAdminBundle:Archive:addArchive } 
+    
+Archive_search:
+    path:     /listArchive
+    defaults: { _controller: sprint2RealEstateAdminBundle:Archive:search } 
+    
+Archive_delete:
+    path:     /supprime/{id}
+    defaults: { _controller: sprint2RealEstateAdminBundle:Archive:deleteArchive }
+
+Archive_update:
+    path:     /modifier/{id}
+    defaults: { _controller: sprint2RealEstateAdminBundle:Archive:updateArchive }
+    
+sprint2_real_estate_admin_chartLine:
+    path:     /chartLine
+    defaults: { _controller: sprint2RealEstateAdminBundle:Graphe:chartLine }  
+  
+sprint2_real_estate_admin_chartPie:
+    path:     /chartPie
+    defaults: { _controller: sprint2RealEstateAdminBundle:Graphe:chartPie }  
+    
+sprint2_real_estate_admin_redirection:
+    path:     /redirection
+    defaults: { _controller: sprint2RealEstateAdminBundle:Default:redirection }
+    
+sprint2_real_estate_admin_sendMail:
+    path:     /sendMail
+    defaults: { _controller: sprint2RealEstateAdminBundle:Default:sendMail }
+      
+sprint2_real_estate_admin_offres:
+    path:     /Offres
+    defaults: { _controller: sprint2RealEstateAdminBundle:Default:offres }
+    
+sprint2_real_estate_admin_offres_supp:
+    path:     /Offres/{id}
+    defaults: { _controller: sprint2RealEstateAdminBundle:Default:supprimerO }
+    
+sprint2_real_estate_admin_admins:
+    path:     /Admins
+    defaults: { _controller: sprint2RealEstateAdminBundle:Default:ajoutAdmin }
+    
+sprint2_real_estate_admin_admins_supp:
+    path:     /Admins/{id}
+    defaults: { _controller: sprint2RealEstateAdminBundle:Default:supprimerAdmin } 
+    
+sprint2_real_estate_admin_oneoffre:
+    path:     /{id}
+    defaults: { _controller: sprint2RealEstateAdminBundle:Default:oneoffre }
+ 

@@ -1,0 +1,89 @@
+{% extends "sprint2GerantBundle:Default:index.html.twig" %}
+
+{% block head %}
+    <title>Liste des offres</title>
+    <script>
+        $(function() {
+            $(document).tooltip();
+        });
+    </script>
+{% endblock head%}
+
+{% block menu %}
+    <a class="item"  href="{{ path('sprint2_gerant_homepage',{ 'id': gerant.id }) }}">
+        <i class="home icon"></i> Accueil
+    </a>
+    <a class="item"  href="{{ path('sprint2_gerant_mail',{ 'id': gerant.id }) }}">
+        <i class="mail icon"></i> Messages
+        {% if nonvu > 0 %}
+            <div class="ui label blue">{{nonvu}}</div>
+        {% endif %}
+    </a>
+    <a class="active item"  href="{{ path('sprint2_gerant_listeoffres',{ 'id': gerant.id }) }}">
+        <i class="list layout icon"></i> Liste des offres
+    </a>
+{% endblock menu %}
+
+{% block body %}
+    <div class="ui purple segment">
+        <h1 class="ui header">
+            <img src="{{ asset('images/list.png') }}">
+            <div class="content">
+                Liste des offres
+            </div>
+        </h1>
+        <div class="ui clearing divider"></div>
+        <div class="ui divided items">
+            {% for offre in offres %}
+                <div class="item">
+                    <div class="image">
+                        <img src="{{ offre.urlimage }}">
+                    </div>
+                    <div class="content">
+                        <h3 class="ui black header">{{ offre.typeimmob }} - {{ offre.nature }}</h3>
+                        <div class="meta">
+                            <span class="cinema">{{ offre.datepublication|date('d/m/y')}}</span>
+                        </div>
+                        <div class="description">
+                            <p>{{ offre.description }}</p>
+                        </div>
+                        <div class="extra">
+                            <div class="ui label"><i class="dollar icon"></i>Prix: {{ offre.payement }} DT</div>
+                            <div class="ui label"><i class="home icon"></i>Surface: {{ offre.surface }}m²</div>
+                            <div class="ui label"><i class="sitemap icon"></i>Nombre des pièces: {{ offre.nbrpiece }}</div>
+                            <br/>
+                            <div class="ui mini images">
+                                {% if offre.ascenceur == 1 %}
+                                    <img class="ui image" src="{{ asset('images/elevator.png') }}" title="ascenseur">
+                                {% endif %}
+                                {% if offre.meuble == 1 %}
+                                    <img class="ui image" src="{{ asset('images/meuble.jpg') }}" title="meublée">
+                                {% endif %}
+                                {% if offre.climatisation == 1 %}
+                                    <img class="ui image" src="{{ asset('images/clim.jpg') }}" title="climatiseur">
+                                {% endif %}
+                                {% if offre.chauffage == 1 %}
+                                    <img class="ui image" src="{{ asset('images/chauffage.jpg') }}" title="chauffage central">
+                                {% endif %}
+                                {% if offre.gazdeville == 1 %}
+                                    <img class="ui image" src="{{ asset('images/gaz.jpg') }}" title="gaz de ville">
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="ui buttons right floated">
+                            <a href="{{ path('sprint2_gerant_update',{ 'id': gerant.id ,'ido': offre.id }) }}">
+                                <div class="ui positive button">Modifier</div>
+                            </a>
+                            <div class="or" data-text="ou"></div>
+                            <a href="{{ path('sprint2_gerant_suppoffre',{ 'id': gerant.id ,'ido': offre.id }) }}">
+                                <div class="ui button red">Supprimer</div>
+                            </a>
+                        </div>
+                    </div>
+                    {{ socialButtons() }}
+                </div>
+
+            {% endfor %}
+        </div>
+    </div>
+{% endblock body %}

@@ -1,0 +1,27 @@
+sprint2_gerant_homepage:
+    path:     /{id}
+    defaults: { _controller: sprint2GerantBundle:Default:index }
+    
+sprint2_gerant_listeoffres:
+    path:     /{id}/offres
+    defaults: { _controller: sprint2GerantBundle:Default:liste }
+
+sprint2_gerant_mail:
+    path:     /{id}/mailbox
+    defaults: { _controller: sprint2GerantBundle:Default:mail }
+    
+sprint2_gerant_update:
+    path:     /{id}/offreupdate/{ido}
+    defaults: { _controller: sprint2GerantBundle:Default:update }
+    
+sprint2_gerant_suppmail:
+    path:     /{id}/messagedelete/{idm}
+    defaults: { _controller: sprint2GerantBundle:Default:suppmail }
+    
+sprint2_gerant_suppoffre:
+    path:     /{id}/offredelete/{ido}
+    defaults: { _controller: sprint2GerantBundle:Default:suppoffre }
+    
+sprint2_gerant_messageajax:
+    path:     /ajax/message
+    defaults: { _controller: sprint2GerantBundle:Default:envoyer }

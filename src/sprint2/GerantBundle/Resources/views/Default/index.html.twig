@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link href="{{ asset('css/semantic.css') }}" type="text/css" rel="stylesheet" />
+        <link href="{{ asset('css/jquery-ui.css') }}" type="text/css" rel="stylesheet" />
+        <script src="{{ asset('js/jquery.js')}}"></script>
+        <script src="{{ asset('js/jquery-ui.js')}}"></script>
+        {% block head %}
+            <title>Agence immobiliere</title>
+            <script src="{{ asset('js/rating.js')}}"></script>
+            <script>
+                $(document).ready(function() {
+                    $('.ui.rating').rating('disable');
+                });
+            </script>
+            <style>
+                div .bg{
+                    text-align:center;
+                    background-image: url('/image/bg.jpg');
+                    background-repeat: no-repeat;
+                    height:400px;
+                    background-size:cover;
+                    background-position-x:center;
+                    background-position-y: 0px;
+                }
+            </style>
+        {% endblock head %}
+    </head>
+    <body>
+        <div class="ui fixed inverted main menu">
+            <div class="container">
+                <div class="ui inverted menu">
+                    {% block menu %}
+                        <a class="active item" href="{{ path('sprint2_gerant_homepage',{ 'id': gerant.id }) }}">
+                            <i class="home icon"></i> Accueil
+                        </a>
+                        <a class="item" href="{{ path('sprint2_gerant_mail',{ 'id': gerant.id }) }}">
+                            <i class="mail icon"></i> Messages
+                            {% if nonvu > 0 %}
+                                <div class="ui label blue">{{nonvu}}</div>
+                            {% endif %}
+                        </a>
+                        <a class="item" href="{{ path('sprint2_gerant_listeoffres',{ 'id': gerant.id }) }}">
+                            <i class="list layout icon"></i> Liste des offres
+                        </a>
+                    {% endblock menu %}
+                    <div class="right menu">
+                        <div class="item">
+                            <i class="user icon green"></i> {{ gerant }}
+                        </div>
+                        <div class="item">
+                            <a href="{{path('sprint2_authandlog_logout')}}">
+                            <div class="ui vertical animated button red">
+                                <div class="visible content">Déconnexion</div>
+                                <div class="hidden content">
+                                    <i class="large sign out icon"></i>
+                                </div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br/>
+        <br/>
+        {% block body %}
+            <div class="ui segment">
+                <div class='bg'>
+                    <div style="padding-top: 50px">
+                        <a href="{{ path('offre_new') }}">
+                            <div class="big ui inverted orange button">Publier une offre</div>
+                        </a>
+                    </div>
+
+                </div>
+                <h4 class="ui horizontal header divider">
+                    <i class="browser icon"></i>
+                    TOP 4 offres publiées
+                </h4>
+                <div class="ui cards">
+                    {% set i = 4 %}
+                    {% for offre in offres if i != 0 %}
+                        <div class="card">
+                            {% if offre.note == 5 %}
+                                <div class="ui top attached label green">TOP</div>
+                            {% endif %}
+                            <a class="image" href="#">
+                                <img src="{{ offre.urlimage }}">
+                            </a>
+                            <div class="content">
+                                <h4 class="ui header">{{ offre.typeimmob }} - {{ offre.nature }}</h4>
+                                <div class="meta">
+                                    {{ offre.datepublication|date('d/m/y')}}
+                                </div>
+                                <div class="description">
+                                    {{ offre.description }}
+                                </div>
+                            </div>
+                            <div class="extra">
+                                Rating:
+                                <div class="ui star rating" data-rating="{{ offre.note }}" data-max-rating="5"></div>
+                            </div>
+                        </div>
+                        {% set i = i - 1 %}
+                    {% endfor %}
+                </div>
+            {% endblock body%}
+    </body>
+</html>

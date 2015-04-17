@@ -1,0 +1,4 @@
+services:
+#    sprint2_gerant.example:
+#        class: sprint2\GerantBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

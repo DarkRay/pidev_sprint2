@@ -1,0 +1,46 @@
+<?php
+
+namespace sprint2\GerantBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Archive
+ *
+ * @ORM\Table(name="archive")
+ * @ORM\Entity
+ */
+class Archive
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id_gerant", type="integer", nullable=false)
+     */
+    private $idGerant;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="date", type="string", length=255, nullable=false)
+     */
+    private $date;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="url", type="string", length=255, nullable=false)
+     */
+    private $url;
+
+
+}

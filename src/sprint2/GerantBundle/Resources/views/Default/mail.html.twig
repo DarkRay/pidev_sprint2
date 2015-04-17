@@ -1,0 +1,102 @@
+{% extends "sprint2GerantBundle:Default:index.html.twig" %}
+
+{% block head %}
+    <title>MailBox</title>
+    <script>
+        $(function() {
+            var idexp;
+            $("#dialog").dialog({
+                autoOpen: false,
+                modal: true,
+                show: {
+                    effect: "clip",
+                    duration: 500
+                },
+                hide: {
+                    effect: "blind",
+                    duration: 500
+                }
+            });
+
+            $(".replyb").click(function() {
+                $("#dialog").dialog("open");
+                idexp = $(this).attr('idexp');
+            });
+
+            $("#annuler").click(function() {
+                $("#dialog").dialog("close");
+            });
+
+            $("#envoyer").click(function() {
+                $.post("{{path('sprint2_gerant_messageajax')}}",
+                        {
+                            text: $("textarea").val(),
+                            iddest: idexp,
+                            idexp: {{ gerant.id }}
+                        },
+                function(data, status) {
+                    $("#dialog").dialog("close");
+                });
+            });
+        });
+    </script>
+{% endblock head %}
+
+{% block menu %}
+    <a class="item"  href="{{ path('sprint2_gerant_homepage',{ 'id': gerant.id }) }}">
+        <i class="home icon"></i> Accueil
+    </a>
+    <a class="active item"  href="{{ path('sprint2_gerant_mail',{ 'id': gerant.id }) }}">
+        <i class="mail icon"></i> Messages
+    </a>
+    <a class="item"  href="{{ path('sprint2_gerant_listeoffres',{ 'id': gerant.id }) }}">
+        <i class="list layout icon"></i> Liste des offres
+    </a>
+{% endblock menu %}
+
+{% block body %}
+    <div class="ui green segment">
+        <h1 class="ui header">
+            <img src="/image/mail.png">
+            <div class="content">
+                MailBox
+            </div>
+        </h1>
+        <div class="ui clearing divider"></div>
+        <table class="ui celled striped table">
+            <tbody>
+                {% for message in messages %}
+                    <tr>
+                        <td class="collapsing">
+                            <i class="mail icon"></i> {{ message.idExpediteur }}
+                        </td>
+                        <td>{{ message.contenu }}</td>
+                        <td class="right aligned collapsing">{{ message.tempsEnvoi|date('d/m/y \\- h:i') }}</td>
+                        <td class="collapsing">
+                            <div class="ui compact icon button circular orange replyb" idexp="{{message.idExpediteur.id}}">
+                                <i class="reply icon"></i>
+                            </div>
+                            <a href="{{ path('sprint2_gerant_suppmail',{ 'id': gerant.id ,'idm': message.id}) }}">
+                                <div class="ui compact icon button circular red">
+                                    <i class="remove icon"></i>
+                                </div>
+                            </a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div id="dialog" title="Envoyer un message">
+        <div class="ui form segment orange">
+            <label>Contenu:</label>
+            <div class="field">
+                <textarea></textarea>
+            </div>
+            <div style="text-align: right">
+                <div class="ui inverted green left attached button" id="envoyer">Envoyer</div>
+                <div class="ui inverted red right attached ui button" id="annuler">Annuler</div>
+            </div>
+        </div>
+    </div>
+{% endblock body %}

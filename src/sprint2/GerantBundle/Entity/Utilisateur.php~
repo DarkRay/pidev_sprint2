@@ -1,0 +1,88 @@
+<?php
+
+namespace sprint2\GerantBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Utilisateur
+ *
+ * @ORM\Table(name="utilisateur")
+ * @ORM\Entity
+ */
+class Utilisateur
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="mail", type="string", length=50, nullable=false)
+     */
+    private $mail;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="password", type="string", length=200, nullable=false)
+     */
+    private $password;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nom", type="string", length=50, nullable=false)
+     */
+    private $nom;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="prenom", type="string", length=50, nullable=false)
+     */
+    private $prenom;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="numMobile", type="string", length=15, nullable=true)
+     */
+    private $nummobile;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="numFix", type="string", length=15, nullable=true)
+     */
+    private $numfix;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="status_matrimonial", type="string", length=50, nullable=true)
+     */
+    private $statusMatrimonial;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="role", type="integer", nullable=false)
+     */
+    private $role;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="URLp", type="string", length=200, nullable=true)
+     */
+    private $urlp;
+
+
+}

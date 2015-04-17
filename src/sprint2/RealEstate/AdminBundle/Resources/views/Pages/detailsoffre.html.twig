@@ -1,0 +1,83 @@
+
+{% extends "sprint2RealEstateAdminBundle::admin_layout.html.twig" %}
+{% block OffreActive %}
+    class="active treeview"
+{% endblock %}
+
+{% block offreCore %}
+        <script
+            src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBzE3mGNaIQaBLClCVVEwHb82y4zIFlEgA">
+        </script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <section class="content">
+        <div class="row">
+            <input id="pos" name="pos" value="{{offre.position}}" style="display:none" />
+        
+            <!-- USERS Offre -->
+
+            <ul class="offre-list">
+
+                <li style="list-style-type: none; margin-left: 200px" >
+                    <div class="small-box bg-black-gradient" >
+                        <div class="inner">
+                                                        
+                            <h3 style="color:crimson;font-family:Palatino Linotype; ">{{offre.typeimmob}}</h3>
+                            <img src="{{offre.urlimage}}"  width="350"/>   <br> <br>
+                              <font style="color:crimson;font-family:Palatino Linotype; font-size:130%">  Adresse  : </font>Tunisie , {{offre.idAdresse.gouvernorat}} , {{offre.idAdresse.ville}}<br><br>
+                                 
+                                   <font style="color:crimson;font-family:Palatino Linotype; font-size:130%"> Gerant : </font>  {{offre.idGerant.nom}} {{offre.idGerant.prenom}} <br><br>
+                                 <font style="color:crimson;font-family:Palatino Linotype;font-size:130% ">Nbr de pièces : </font>{{offre.nbrpiece}} <br><br>
+                             <font style="color:crimson;font-family:Palatino Linotype; font-size:130%"> Surface :</font>
+                             {{offre.surface}} Mètres <br><br>
+                             <font style="color:crimson;font-family:Palatino Linotype;font-size:130% "> Etat :  </font>{{offre.nature}} <br><br>
+                            <font style="color:crimson;font-family:Palatino Linotype; font-size:130%">   Prix : </font> {{offre.payement}} DT <br><br>
+                            <font style="color:crimson;font-family:Palatino Linotype; font-size:130% "> Publié le </font>{{offre.datepublication|date('d/m/y')}} <br><br>
+   <font style="color:crimson;font-family:Palatino Linotype; font-size:130% ">Modifé le </font> {{offre.datemodification|date('d/m/y')}}<br><br>
+  <font style="color:crimson;font-family:Palatino Linotype; font-size:130% ">Note : </font> {{offre.note}} / 5 <br><br>
+  <font style="color:crimson;font-family:Palatino Linotype; font-size:130% ">Description :  </font>{{offre.description}} <br><br>
+    <font style="color:crimson;font-family:Palatino Linotype; font-size:130% ">Position  </font>{{offre.description}} <br><br>
+  <div id="googleMap" style="width:auto;height:380px;"></div>
+                        </div>
+                        
+                       
+
+                    </div>
+                         
+                </li>
+
+            </ul>
+                <!DOCTYPE html>
+
+        <script>
+            function initialize() {
+                
+              
+                var pos = document.getElementById("pos").value;
+               var pos1 = pos.split(",");
+                var myCenter=new google.maps.LatLng(pos1[0],pos1[1]);
+                var mapProp = {
+                    center: new google.maps.LatLng(pos1[0],pos1[1]),
+                    zoom: 5,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                };
+                var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+           
+          
+             marker = new google.maps.Marker({
+                position: myCenter,
+                animation: google.maps.Animation.BOUNCE
+            });
+            marker.setMap(map);
+            
+
+   }   
+             google.maps.event.addDomListener(window, 'load', initialize);
+             
+             
+         
+        </script>
+  
+
+        </div>
+    </section> 
+{% endblock %}

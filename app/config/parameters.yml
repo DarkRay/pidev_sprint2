@@ -1,0 +1,14 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_driver: pdo_mysql
+    database_host: 127.0.0.1
+    database_port: null
+    database_name: agenceimmob
+    database_user: root
+    database_password: root
+    mailer_transport: gmail
+    mailer_host: smtp.gmail.com
+    mailer_user: stackoverflow.agenceimmob@gmail.com
+    mailer_password: esprit3a19
+    locale: en
+    secret: ac7ef6ab6a2555d91f23ed90492abfc1f0cb1bb4

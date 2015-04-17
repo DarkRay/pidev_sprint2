@@ -1,0 +1,50 @@
+{% extends "sprint2RealEstateAdminBundle::admin_layout.html.twig" %}
+    {% block Image %}
+        <img src="{{ image }}" class="img-circle" alt="User Image" />
+    {% endblock %}
+    {% block Image1 %}
+        <img src="{{ image }}" class="user-image" alt="User Image"/>     
+    {% endblock %}
+    {% block Image2 %}
+    <img src="{{ image }}" class="img-circle" alt="User Image" />
+    {% endblock %}
+    {% block offreActive %}
+        class="active treeview"
+    {% endblock %}
+    {% block MailboxEtra %}
+        <small class="label pull-right bg-yellow">{{countmail4}}</small>
+    {% endblock %}
+    {% block offreCore %}
+       
+       <section class="content">
+        <div class="row">
+            
+              <!-- USERS Offre -->
+              <div class="col-md-12">
+                <ul class="offre-list">
+                    {% for offre in offre %}                   
+                        <li style="list-style-type: none;">
+                            <div class="small-box bg-red">
+                                <div class="inner">
+                                    <img src="{{offre.urlimage}}"  height="150"/>                                  
+                                  <h3>{{offre.typeimmob}}</h3>
+                                  <p> {{offre.nbrpiece}} Piece, {{offre.surface}} Metre, Tunisie {{offre.idAdresse.gouvernorat}} {{offre.idAdresse.ville}}, A {{offre.nature}} </p>
+                                </div>
+
+                                <a href="{{ path ("sprint2_real_estate_admin_oneoffre",{'id':offre.id})}}" class="small-box-footer">
+                                  Plus d'informations <i class="fa fa-arrow-circle-right"></i>
+                                  
+                                </a>
+                                 <a href="{{ path ("sprint2_real_estate_admin_offres_supp",{'id':offre.id})}}" class="small-box-footer">
+                                 Supprimer <i class="fa fa-trash-o"></i>
+                                </a>
+                            </div>
+                                   
+                        </li>
+                    {% endfor %}
+                </ul>
+
+          </div></div>
+
+       </section>             
+    {% endblock %}

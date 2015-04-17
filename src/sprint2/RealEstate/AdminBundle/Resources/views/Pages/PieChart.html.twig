@@ -1,0 +1,56 @@
+{% extends "sprint2RealEstateAdminBundle::admin_layout.html.twig" %}
+    {% block Image %}
+        <img src="{{ image }}" class="img-circle" alt="User Image" />
+    {% endblock %}
+    {% block Image1 %}
+        <img src="{{ image }}" class="user-image" alt="User Image"/>     
+    {% endblock %}
+    {% block Image2 %}
+    <img src="{{ image }}" class="img-circle" alt="User Image" />
+    {% endblock %}
+    {% block StatActive %}
+        class="active treeview"
+    {% endblock %}
+    {% block MailboxEtra %}
+        <small class="label pull-right bg-yellow">{{countmail4}}</small>
+    {% endblock %}
+
+   
+    {% block LineChart %}
+        <ul class="treeview-menu">
+            <li class="active"><a href="chartPie">PieChart</a></li>
+            <li><a href="chartLine">LineChart</a></li>   
+        </ul>
+    {% endblock %}
+        
+         {% block StatCore%}
+       <section class="content">
+       
+   
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
+
+type="text/javascript"></script>
+
+<script src="//code.highcharts.com/4.0.1/highcharts.js"></script>
+
+<script src="//code.highcharts.com/4.0.1/modules/exporting.js"></script>
+
+<script type="text/javascript">
+ 
+ {{ chart(chart) }}
+
+</script>
+
+
+<div id="piechart" style="min-width: 550px; height: 550px; margin-bottom: 10px">{# empty 
+
+Twig template #}
+</div>
+
+     <i>
+<center>Notice : 
+    Ce graphique schématise les notes les plus fréquents des offres posté par chaque gérant</i></center>
+   </section>
+
+
+{% endblock %}
