@@ -1,6 +1,12 @@
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
+/web/bundles/
+/app/bootstrap*
+/app/cache/*
+/app/logs/*
+/vendor/
+/app/config/parameters.yml
 
 # Folder config file
 Desktop.ini
