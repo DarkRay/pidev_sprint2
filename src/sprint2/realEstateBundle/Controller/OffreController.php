@@ -2,6 +2,7 @@
 
 namespace sprint2\realEstateBundle\Controller;
 
+
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use sprint2\realEstateBundle\Entity\Adresse;
@@ -16,6 +17,7 @@ use sprint2\realEstateBundle\Models\Document;
  * Offre controller.
  *
  */
+
 class OffreController extends Controller
 {
 
@@ -89,9 +91,9 @@ class OffreController extends Controller
      */
     public function newAction()
     {
-        $latitude='-24';
-        $longitude='142';
-        $adr='Australie';
+        $latitude='35.930252169917225';
+        $longitude='9.5048828125';
+        $adr='35.930252169917225,9.5048828125';
         
 
         $session = $this->getRequest()->getSession();
@@ -147,7 +149,7 @@ class OffreController extends Controller
             $entity->setSurface($surface);
             $entity->setAdresse($adresse);
             $entity->setPayement($prix);
-            $entity->setPosition("48.829677,2.331086");
+            $entity->setPosition('adr');
 
             $validator = $this->get('validator');
 
@@ -553,7 +555,7 @@ class OffreController extends Controller
                 } else {
                    // echo "Sorry, there was an error uploading your file.";
                 }
-}
+            }
 
         }  
     

@@ -3935,6 +3935,7 @@
     <service id="rest.offre.handler" class="sprint2\restBundle\Handler\offreHandler">
       <argument type="service" id="doctrine.orm.default_entity_manager"/>
       <argument>sprint2\realEstateBundle\Entity\Offre</argument>
+      <argument type="service" id="form.factory"/>
     </service>
     <service id="twig.extension.acme.demo" class="Acme\DemoBundle\Twig\Extension\DemoExtension" public="false">
       <tag name="twig.extension"/>
