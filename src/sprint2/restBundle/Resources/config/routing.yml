@@ -1,0 +1,8 @@
+sprint2rest_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: sprint2restBundle:Default:index }
+
+sprint2rest_getOffres:
+    type: rest
+    prefix: /v1
+    resource: sprint2\restBundle\Controller\offreRestController
