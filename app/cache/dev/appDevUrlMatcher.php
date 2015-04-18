@@ -5,7 +5,7 @@ use Symfony\Component\Routing\Exception\ResourceNotFoundException;
 use Symfony\Component\Routing\RequestContext;
 
 /**
- * appDevUrlMatcher
+ * appDevUrlMatcher.
  *
  * This class has been auto-generated
  * by the Symfony Routing Component.
@@ -242,6 +242,22 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             }
 
         }
+
+        // sprint2rest_homepage
+        if (0 === strpos($pathinfo, '/hello') && preg_match('#^/hello/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'sprint2rest_homepage')), array (  '_controller' => 'sprint2\\restBundle\\Controller\\DefaultController::indexAction',));
+        }
+
+        // get_offres
+        if (0 === strpos($pathinfo, '/v1/offres') && preg_match('#^/v1/offres(?:\\.(?P<_format>xml|json|html))?$#s', $pathinfo, $matches)) {
+            if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
+                $allow = array_merge($allow, array('GET', 'HEAD'));
+                goto not_get_offres;
+            }
+
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'get_offres')), array (  '_controller' => 'sprint2\\restBundle\\Controller\\offreRestController::getOffresAction',  '_format' => NULL,));
+        }
+        not_get_offres:
 
         if (0 === strpos($pathinfo, '/adresse')) {
             // adresse
