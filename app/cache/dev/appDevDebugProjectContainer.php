@@ -3107,7 +3107,7 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getRest_Offre_HandlerService()
     {
-        return $this->services['rest.offre.handler'] = new \sprint2\restBundle\Handler\offreHandler($this->get('doctrine.orm.default_entity_manager'), 'sprint2\\realEstateBundle\\Entity\\Offre');
+        return $this->services['rest.offre.handler'] = new \sprint2\restBundle\Handler\offreHandler($this->get('doctrine.orm.default_entity_manager'), 'sprint2\\realEstateBundle\\Entity\\Offre', $this->get('form.factory'));
     }
 
     /**
