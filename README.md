@@ -1,7 +1,7 @@
 Ti_mob Symfony Project (Sprint Web)
 ========================
 
-Welcome to the ower Symfony Timob Project (Sprint Web).
+Welcome to the our Symfony Timob Project (Sprint Web).
 
 What's inside?
 --------------
