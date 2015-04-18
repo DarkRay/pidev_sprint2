@@ -2206,7 +2206,7 @@ $a = array();
 foreach ($var as $k => $v) {
 $a[] = sprintf('%s => %s', $k, $this->varToString($v));
 }
-return sprintf("Array(%s)", implode(', ', $a));
+return sprintf('Array(%s)', implode(', ', $a));
 }
 if (is_resource($var)) {
 return sprintf('Resource(%s)', get_resource_type($var));
@@ -6486,10 +6486,10 @@ if (false === $written) {
 throw new \RuntimeException(sprintf('Unable to write cached file to: %s', $tempfile));
 }
 if (false === rename($tempfile, $path)) {
+@unlink($tempfile);
 throw new \RuntimeException(sprintf('Unable to rename %s to %s', $tempfile, $path));
 }
 @chmod($path, 0666 & ~umask());
-@unlink($tempfile);
 }
 public function getClassAnnotation(\ReflectionClass $class, $annotationName)
 {
@@ -6660,7 +6660,6 @@ public function getEntityManagerForClass($class);
 }
 namespace Doctrine\Common\Persistence
 {
-use Doctrine\Common\Persistence\ManagerRegistry;
 abstract class AbstractManagerRegistry implements ManagerRegistry
 {
 private $name;
@@ -6727,7 +6726,7 @@ return $this->getService($this->managers[$name]);
 public function getManagerForClass($class)
 {
 if (strpos($class,':') !== false) {
-list($namespaceAlias, $simpleClassName) = explode(':', $class);
+list($namespaceAlias, $simpleClassName) = explode(':', $class, 2);
 $class = $this->getAliasNamespace($namespaceAlias) .'\\'. $simpleClassName;
 }
 $proxyClass = new \ReflectionClass($class);
@@ -7282,87 +7281,6 @@ return $converters;
 }
 namespace Sensio\Bundle\FrameworkExtraBundle\EventListener
 {
-use Symfony\Component\DependencyInjection\ContainerInterface;
-use Symfony\Component\HttpKernel\Event\FilterControllerEvent;
-use Symfony\Component\HttpKernel\Event\GetResponseForControllerResultEvent;
-use Symfony\Component\HttpKernel\KernelEvents;
-use Symfony\Component\EventDispatcher\EventSubscriberInterface;
-use Symfony\Component\HttpFoundation\StreamedResponse;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
-class TemplateListener implements EventSubscriberInterface
-{
-protected $container;
-public function __construct(ContainerInterface $container)
-{
-$this->container = $container;
-}
-public function onKernelController(FilterControllerEvent $event)
-{
-if (!is_array($controller = $event->getController())) {
-return;
-}
-$request = $event->getRequest();
-if (!$configuration = $request->attributes->get('_template')) {
-return;
-}
-if (!$configuration->getTemplate()) {
-$guesser = $this->container->get('sensio_framework_extra.view.guesser');
-$configuration->setTemplate($guesser->guessTemplateName($controller, $request, $configuration->getEngine()));
-}
-$request->attributes->set('_template', $configuration->getTemplate());
-$request->attributes->set('_template_vars', $configuration->getVars());
-$request->attributes->set('_template_streamable', $configuration->isStreamable());
-if (!$configuration->getVars()) {
-$r = new \ReflectionObject($controller[0]);
-$vars = array();
-foreach ($r->getMethod($controller[1])->getParameters() as $param) {
-$vars[] = $param->getName();
-}
-$request->attributes->set('_template_default_vars', $vars);
-}
-}
-public function onKernelView(GetResponseForControllerResultEvent $event)
-{
-$request = $event->getRequest();
-$parameters = $event->getControllerResult();
-$templating = $this->container->get('templating');
-if (null === $parameters) {
-if (!$vars = $request->attributes->get('_template_vars')) {
-if (!$vars = $request->attributes->get('_template_default_vars')) {
-return;
-}
-}
-$parameters = array();
-foreach ($vars as $var) {
-$parameters[$var] = $request->attributes->get($var);
-}
-}
-if (!is_array($parameters)) {
-return $parameters;
-}
-if (!$template = $request->attributes->get('_template')) {
-return $parameters;
-}
-if (!$request->attributes->get('_template_streamable')) {
-$event->setResponse($templating->renderResponse($template, $parameters));
-} else {
-$callback = function () use ($templating, $template, $parameters) {
-return $templating->stream($template, $parameters);
-};
-$event->setResponse(new StreamedResponse($callback));
-}
-}
-public static function getSubscribedEvents()
-{
-return array(
-KernelEvents::CONTROLLER => array('onKernelController', -128),
-KernelEvents::VIEW =>'onKernelView',
-);
-}
-}
-}
-namespace Sensio\Bundle\FrameworkExtraBundle\EventListener
-{
 use Symfony\Component\HttpKernel\Event\FilterControllerEvent;
 use Symfony\Component\HttpKernel\Event\FilterResponseEvent;
 use Symfony\Component\HttpKernel\KernelEvents;
@@ -7443,7 +7361,8 @@ $response->setVary($configuration->getVary());
 }
 if ($configuration->isPublic()) {
 $response->setPublic();
-} else {
+}
+if ($configuration->isPrivate()) {
 $response->setPrivate();
 }
 if (isset($this->lastModifiedDates[$request])) {

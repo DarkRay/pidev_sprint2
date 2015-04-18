@@ -37,7 +37,10 @@
         "jquery/jquery":  "~1.11",
         "symfony/serializer": "dev-master",
         "ob/highcharts-bundle":"dev-master",
-        "nomaya/social-bundle": "dev-master"
+        "nomaya/social-bundle": "dev-master",
+        "friendsofsymfony/rest-bundle": "1.*",
+        "jms/serializer-bundle": "0.13.*",
+        "nelmio/api-doc-bundle":"~2.8"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3"

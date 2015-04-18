@@ -24,6 +24,10 @@ class AppKernel extends Kernel
             new Nomaya\SocialBundle\NomayaSocialBundle(),
             new sprint2\AuthandlogBundle\sprint2AuthandlogBundle(),
             new sprint2\GerantBundle\sprint2GerantBundle(),
+            new sprint2\restBundle\sprint2restBundle(),
+            new FOS\RestBundle\FOSRestBundle(),
+            new JMS\SerializerBundle\JMSSerializerBundle(),
+            new Nelmio\ApiDocBundle\NelmioApiDocBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

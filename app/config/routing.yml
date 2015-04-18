@@ -1,3 +1,7 @@
+sprint2rest:
+    resource: "@sprint2restBundle/Resources/config/routing.yml"
+    prefix:   /
+
 sprint2_real_estate_admin:
     resource: "@sprint2RealEstateAdminBundle/Resources/config/routing.yml"
     prefix:   /
@@ -21,3 +25,8 @@ real_estate_admin:
 app:
     resource: @AppBundle/Controller/
     type:     annotation
+
+sprint2rest:
+    resource: "@sprint2restBundle/Resources/config/routing.yml"
+    prefix:   /api
+    type: rest
