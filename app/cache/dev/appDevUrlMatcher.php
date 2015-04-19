@@ -248,16 +248,41 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'sprint2rest_homepage')), array (  '_controller' => 'sprint2\\restBundle\\Controller\\DefaultController::indexAction',));
         }
 
-        // get_offres
-        if (0 === strpos($pathinfo, '/v1/offres') && preg_match('#^/v1/offres(?:\\.(?P<_format>xml|json|html))?$#s', $pathinfo, $matches)) {
-            if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
-                $allow = array_merge($allow, array('GET', 'HEAD'));
-                goto not_get_offres;
-            }
+        if (0 === strpos($pathinfo, '/v1/offres')) {
+            // get_offres
+            if (preg_match('#^/v1/offres(?:\\.(?P<_format>xml|json|html))?$#s', $pathinfo, $matches)) {
+                if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
+                    $allow = array_merge($allow, array('GET', 'HEAD'));
+                    goto not_get_offres;
+                }
 
-            return $this->mergeDefaults(array_replace($matches, array('_route' => 'get_offres')), array (  '_controller' => 'sprint2\\restBundle\\Controller\\offreRestController::getOffresAction',  '_format' => NULL,));
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'get_offres')), array (  '_controller' => 'sprint2\\restBundle\\Controller\\offreRestController::getOffresAction',  '_format' => NULL,));
+            }
+            not_get_offres:
+
+            // get_offre
+            if (preg_match('#^/v1/offres/(?P<id>[^/\\.]++)(?:\\.(?P<_format>xml|json|html))?$#s', $pathinfo, $matches)) {
+                if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
+                    $allow = array_merge($allow, array('GET', 'HEAD'));
+                    goto not_get_offre;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'get_offre')), array (  '_controller' => 'sprint2\\restBundle\\Controller\\offreRestController::getOffreAction',  '_format' => NULL,));
+            }
+            not_get_offre:
+
+            // post_offre
+            if (preg_match('#^/v1/offres(?:\\.(?P<_format>xml|json|html))?$#s', $pathinfo, $matches)) {
+                if ($this->context->getMethod() != 'POST') {
+                    $allow[] = 'POST';
+                    goto not_post_offre;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'post_offre')), array (  '_controller' => 'sprint2\\restBundle\\Controller\\offreRestController::postOffreAction',  '_format' => NULL,));
+            }
+            not_post_offre:
+
         }
-        not_get_offres:
 
         if (0 === strpos($pathinfo, '/adresse')) {
             // adresse
