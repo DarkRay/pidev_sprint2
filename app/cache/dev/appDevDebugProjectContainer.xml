@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
   <parameters>
-    <parameter key="kernel.root_dir">/home/haddada/pidev_sprint2/app</parameter>
+    <parameter key="kernel.root_dir">C:\wamp\www\pidev_sprint2\app</parameter>
     <parameter key="kernel.environment">dev</parameter>
     <parameter key="kernel.debug">true</parameter>
-    <parameter key="kernel.name">app</parameter>
-    <parameter key="kernel.cache_dir">/home/haddada/pidev_sprint2/app/cache/dev</parameter>
-    <parameter key="kernel.logs_dir">/home/haddada/pidev_sprint2/app/logs</parameter>
+    <parameter key="kernel.name">ap_</parameter>
+    <parameter key="kernel.cache_dir">C:/wamp/www/pidev_sprint2/app/cache/dev</parameter>
+    <parameter key="kernel.logs_dir">C:\wamp\www\pidev_sprint2\app\logs</parameter>
     <parameter key="kernel.bundles" type="collection">
       <parameter key="FrameworkBundle">Symfony\Bundle\FrameworkBundle\FrameworkBundle</parameter>
       <parameter key="SecurityBundle">Symfony\Bundle\SecurityBundle\SecurityBundle</parameter>
@@ -115,7 +115,7 @@
     <parameter key="session.storage.options" type="collection">
       <parameter key="gc_probability">1</parameter>
     </parameter>
-    <parameter key="session.save_path">/home/haddada/pidev_sprint2/app/cache/dev/sessions</parameter>
+    <parameter key="session.save_path">C:/wamp/www/pidev_sprint2/app/cache/dev/sessions</parameter>
     <parameter key="session.metadata.update_threshold">0</parameter>
     <parameter key="security.secure_random.class">Symfony\Component\Security\Core\Util\SecureRandom</parameter>
     <parameter key="form.resolved_type_factory.class">Symfony\Component\Form\ResolvedFormTypeFactory</parameter>
@@ -191,7 +191,7 @@
     <parameter key="data_collector.form.extractor.class">Symfony\Component\Form\Extension\DataCollector\FormDataExtractor</parameter>
     <parameter key="profiler_listener.only_exceptions">false</parameter>
     <parameter key="profiler_listener.only_master_requests">false</parameter>
-    <parameter key="profiler.storage.dsn">file:/home/haddada/pidev_sprint2/app/cache/dev/profiler</parameter>
+    <parameter key="profiler.storage.dsn">file:C:/wamp/www/pidev_sprint2/app/cache/dev/profiler</parameter>
     <parameter key="profiler.storage.username"></parameter>
     <parameter key="profiler.storage.password"></parameter>
     <parameter key="profiler.storage.lifetime">86400</parameter>
@@ -215,7 +215,7 @@
     <parameter key="router.request_context.host">localhost</parameter>
     <parameter key="router.request_context.scheme">http</parameter>
     <parameter key="router.request_context.base_url"></parameter>
-    <parameter key="router.resource">/home/haddada/pidev_sprint2/app/cache/dev/assetic/routing.yml</parameter>
+    <parameter key="router.resource">C:/wamp/www/pidev_sprint2/app/cache/dev/assetic/routing.yml</parameter>
     <parameter key="router.cache_class_prefix">appDev</parameter>
     <parameter key="request_listener.http_port">80</parameter>
     <parameter key="request_listener.https_port">443</parameter>
@@ -226,7 +226,7 @@
     <parameter key="debug.stopwatch.class">Symfony\Component\Stopwatch\Stopwatch</parameter>
     <parameter key="debug.error_handler.throw_at">-1</parameter>
     <parameter key="debug.event_dispatcher.class">Symfony\Component\HttpKernel\Debug\TraceableEventDispatcher</parameter>
-    <parameter key="debug.container.dump">/home/haddada/pidev_sprint2/app/cache/dev/appDevDebugProjectContainer.xml</parameter>
+    <parameter key="debug.container.dump">C:/wamp/www/pidev_sprint2/app/cache/dev/appDevDebugProjectContainer.xml</parameter>
     <parameter key="debug.controller_resolver.class">Symfony\Component\HttpKernel\Controller\TraceableControllerResolver</parameter>
     <parameter key="security.context.class">Symfony\Component\Security\Core\SecurityContext</parameter>
     <parameter key="security.user_checker.class">Symfony\Component\Security\Core\User\UserChecker</parameter>
@@ -352,7 +352,7 @@
         <parameter>Symfony\Bundle\TwigBundle\TwigDefaultEscapingStrategy</parameter>
         <parameter>guess</parameter>
       </parameter>
-      <parameter key="cache">/home/haddada/pidev_sprint2/app/cache/dev/twig</parameter>
+      <parameter key="cache">C:/wamp/www/pidev_sprint2/app/cache/dev/twig</parameter>
       <parameter key="charset">UTF-8</parameter>
       <parameter key="paths" type="collection"/>
     </parameter>
@@ -437,7 +437,7 @@
     <parameter key="swiftmailer.mailer.default.transport.smtp.auth_mode">login</parameter>
     <parameter key="swiftmailer.mailer.default.transport.smtp.timeout">30</parameter>
     <parameter key="swiftmailer.mailer.default.transport.smtp.source_ip">null</parameter>
-    <parameter key="swiftmailer.spool.default.memory.path">/home/haddada/pidev_sprint2/app/cache/dev/swiftmailer/spool/default</parameter>
+    <parameter key="swiftmailer.spool.default.memory.path">C:/wamp/www/pidev_sprint2/app/cache/dev/swiftmailer/spool/default</parameter>
     <parameter key="swiftmailer.mailer.default.spool.enabled">true</parameter>
     <parameter key="swiftmailer.mailer.default.plugin.impersonate">null</parameter>
     <parameter key="swiftmailer.mailer.default.single_address">null</parameter>
@@ -462,7 +462,7 @@
     <parameter key="assetic.worker.cache_busting.class">Assetic\Factory\Worker\CacheBustingWorker</parameter>
     <parameter key="assetic.value_supplier.class">Symfony\Bundle\AsseticBundle\DefaultValueSupplier</parameter>
     <parameter key="assetic.node.paths" type="collection"/>
-    <parameter key="assetic.cache_dir">/home/haddada/pidev_sprint2/app/cache/dev/assetic</parameter>
+    <parameter key="assetic.cache_dir">C:/wamp/www/pidev_sprint2/app/cache/dev/assetic</parameter>
     <parameter key="assetic.bundles" type="collection"/>
     <parameter key="assetic.twig_extension.class">Symfony\Bundle\AsseticBundle\Twig\AsseticExtension</parameter>
     <parameter key="assetic.twig_formula_loader.class">Assetic\Extension\Twig\TwigFormulaLoader</parameter>
@@ -472,13 +472,13 @@
     <parameter key="assetic.debug">true</parameter>
     <parameter key="assetic.use_controller">true</parameter>
     <parameter key="assetic.enable_profiler">false</parameter>
-    <parameter key="assetic.read_from">/home/haddada/pidev_sprint2/app/../web</parameter>
-    <parameter key="assetic.write_to">/home/haddada/pidev_sprint2/app/../web</parameter>
+    <parameter key="assetic.read_from">C:\wamp\www\pidev_sprint2\app/../web</parameter>
+    <parameter key="assetic.write_to">C:\wamp\www\pidev_sprint2\app/../web</parameter>
     <parameter key="assetic.variables" type="collection"/>
-    <parameter key="assetic.java.bin">/usr/bin/java</parameter>
-    <parameter key="assetic.node.bin">/usr/bin/node</parameter>
+    <parameter key="assetic.java.bin">c:\ProgramData\Oracle\Java\javapath\java.EXE</parameter>
+    <parameter key="assetic.node.bin">c:\Program Files\nodejs\\node.EXE</parameter>
     <parameter key="assetic.ruby.bin">/usr/bin/ruby</parameter>
-    <parameter key="assetic.sass.bin">/usr/local/bin/sass</parameter>
+    <parameter key="assetic.sass.bin">/usr/bin/sass</parameter>
     <parameter key="assetic.filter.less.class">Assetic\Filter\LessFilter</parameter>
     <parameter key="assetic.filter.less.node">/usr/bin/node</parameter>
     <parameter key="assetic.filter.less.node_paths" type="collection">
@@ -590,7 +590,7 @@
     <parameter key="doctrine.orm.second_level_cache.cache_configuration.class">Doctrine\ORM\Cache\CacheConfiguration</parameter>
     <parameter key="doctrine.orm.second_level_cache.regions_configuration.class">Doctrine\ORM\Cache\RegionsConfiguration</parameter>
     <parameter key="doctrine.orm.auto_generate_proxy_classes">true</parameter>
-    <parameter key="doctrine.orm.proxy_dir">/home/haddada/pidev_sprint2/app/cache/dev/doctrine/orm/Proxies</parameter>
+    <parameter key="doctrine.orm.proxy_dir">C:/wamp/www/pidev_sprint2/app/cache/dev/doctrine/orm/Proxies</parameter>
     <parameter key="doctrine.orm.proxy_namespace">Proxies</parameter>
     <parameter key="sensio_framework_extra.view.guesser.class">Sensio\Bundle\FrameworkExtraBundle\Templating\TemplateGuesser</parameter>
     <parameter key="sensio_framework_extra.controller.listener.class">Sensio\Bundle\FrameworkExtraBundle\EventListener\ControllerListener</parameter>
@@ -617,12 +617,12 @@
     <parameter key="braincrafted_bootstrap.flash.class">Braincrafted\Bundle\BootstrapBundle\Session\FlashMessage</parameter>
     <parameter key="braincrafted_bootstrap.customize" type="collection">
       <parameter key="variables_file">null</parameter>
-      <parameter key="bootstrap_output">/home/haddada/pidev_sprint2/app/Resources/less/bootstrap.less</parameter>
+      <parameter key="bootstrap_output">C:\wamp\www\pidev_sprint2\app/Resources/less/bootstrap.less</parameter>
       <parameter key="bootstrap_template">BraincraftedBootstrapBundle:Bootstrap:bootstrap.less.twig</parameter>
     </parameter>
-    <parameter key="braincrafted_bootstrap.assets_dir">/home/haddada/pidev_sprint2/app/../vendor/twbs/bootstrap</parameter>
-    <parameter key="braincrafted_bootstrap.fontawesome_dir">/home/haddada/pidev_sprint2/app/../vendor/fortawesome/font-awesome</parameter>
-    <parameter key="braincrafted_bootstrap.fonts_dir">/home/haddada/pidev_sprint2/app/../web/fonts</parameter>
+    <parameter key="braincrafted_bootstrap.assets_dir">C:\wamp\www\pidev_sprint2\app/../vendor/twbs/bootstrap</parameter>
+    <parameter key="braincrafted_bootstrap.fontawesome_dir">C:\wamp\www\pidev_sprint2\app/../vendor/fortawesome/font-awesome</parameter>
+    <parameter key="braincrafted_bootstrap.fonts_dir">C:\wamp\www\pidev_sprint2\app/../web/fonts</parameter>
     <parameter key="braincrafted_bootstrap.output_dir">null</parameter>
     <parameter key="braincrafted_bootstrap.less_filter">less</parameter>
     <parameter key="braincrafted_bootstrap.icon_tag">span</parameter>
@@ -694,7 +694,7 @@
     <parameter key="fos_rest.request.param_fetcher.reader.class">FOS\RestBundle\Request\ParamReader</parameter>
     <parameter key="fos_rest.form.extension.csrf_disable.class">FOS\RestBundle\Form\Extension\DisableCSRFExtension</parameter>
     <parameter key="fos_rest.disable_csrf_role">ROLE_API</parameter>
-    <parameter key="fos_rest.cache_dir">/home/haddada/pidev_sprint2/app/cache/dev/fos_rest</parameter>
+    <parameter key="fos_rest.cache_dir">C:/wamp/www/pidev_sprint2/app/cache/dev/fos_rest</parameter>
     <parameter key="fos_rest.serializer.serialize_null">false</parameter>
     <parameter key="fos_rest.formats" type="collection">
       <parameter key="xml">false</parameter>
@@ -967,7 +967,7 @@
               <service class="Symfony\Bundle\FrameworkBundle\CacheWarmer\TemplateFinder" public="false">
                 <argument type="service" id="kernel"/>
                 <argument type="service" id="templating.filename_parser"/>
-                <argument>/home/haddada/pidev_sprint2/app/Resources</argument>
+                <argument>C:\wamp\www\pidev_sprint2\app/Resources</argument>
               </service>
             </argument>
             <argument type="service" id="templating.locator"/>
@@ -993,7 +993,7 @@
               <service class="Symfony\Bundle\FrameworkBundle\CacheWarmer\TemplateFinder" public="false">
                 <argument type="service" id="kernel"/>
                 <argument type="service" id="templating.filename_parser"/>
-                <argument>/home/haddada/pidev_sprint2/app/Resources</argument>
+                <argument>C:\wamp\www\pidev_sprint2\app/Resources</argument>
               </service>
             </argument>
           </service>
@@ -1016,7 +1016,7 @@
     <service id="filesystem" class="Symfony\Component\Filesystem\Filesystem"/>
     <service id="file_locator" class="Symfony\Component\HttpKernel\Config\FileLocator">
       <argument type="service" id="kernel"/>
-      <argument>/home/haddada/pidev_sprint2/app/Resources</argument>
+      <argument>C:\wamp\www\pidev_sprint2\app/Resources</argument>
     </service>
     <service id="uri_signer" class="Symfony\Component\HttpKernel\UriSigner">
       <argument>ac7ef6ab6a2555d91f23ed90492abfc1f0cb1bb4</argument>
@@ -1113,7 +1113,7 @@
         </argument>
       </argument>
       <argument type="collection">
-        <argument key="cache_dir">/home/haddada/pidev_sprint2/app/cache/dev/translations</argument>
+        <argument key="cache_dir">C:/wamp/www/pidev_sprint2/app/cache/dev/translations</argument>
         <argument key="debug">true</argument>
       </argument>
     </service>
@@ -1326,7 +1326,7 @@
     </service>
     <service id="security.secure_random" class="Symfony\Component\Security\Core\Util\SecureRandom">
       <tag name="monolog.logger" channel="security"/>
-      <argument>/home/haddada/pidev_sprint2/app/cache/dev/secure_random.seed</argument>
+      <argument>C:/wamp/www/pidev_sprint2/app/cache/dev/secure_random.seed</argument>
       <argument type="service" id="monolog.logger.security" on-invalid="ignore"/>
     </service>
     <service id="form.resolved_type_factory" class="Symfony\Component\Form\Extension\DataCollector\Proxy\ResolvedTypeFactoryDataCollectorProxy">
@@ -1553,7 +1553,7 @@
     <service id="templating.filename_parser" class="Symfony\Bundle\FrameworkBundle\Templating\TemplateFilenameParser"/>
     <service id="templating.locator" class="Symfony\Bundle\FrameworkBundle\Templating\Loader\TemplateLocator" public="false">
       <argument type="service" id="file_locator"/>
-      <argument>/home/haddada/pidev_sprint2/app/cache/dev</argument>
+      <argument>C:/wamp/www/pidev_sprint2/app/cache/dev</argument>
     </service>
     <service id="templating.helper.slots" class="Symfony\Component\Templating\Helper\SlotsHelper">
       <tag name="templating.helper" alias="slots"/>
@@ -1591,7 +1591,7 @@
     <service id="templating.helper.code" class="Symfony\Bundle\FrameworkBundle\Templating\Helper\CodeHelper">
       <tag name="templating.helper" alias="code"/>
       <argument>null</argument>
-      <argument>/home/haddada/pidev_sprint2/app</argument>
+      <argument>C:\wamp\www\pidev_sprint2\app</argument>
       <argument>UTF-8</argument>
     </service>
     <service id="templating.helper.translator" class="Symfony\Bundle\FrameworkBundle\Templating\Helper\TranslatorHelper">
@@ -1646,12 +1646,12 @@
       </call>
       <call method="addXmlMappings">
         <argument type="collection">
-          <argument>/home/haddada/pidev_sprint2/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/config/validation.xml</argument>
+          <argument>C:\wamp\www\pidev_sprint2\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/config/validation.xml</argument>
         </argument>
       </call>
       <call method="addYamlMappings">
         <argument type="collection">
-          <argument>/home/haddada/pidev_sprint2/src/sprint2/realEstateBundle/Resources/config/validation.yml</argument>
+          <argument>C:\wamp\www\pidev_sprint2\src\sprint2\realEstateBundle\Resources\config\validation.yml</argument>
         </argument>
       </call>
       <call method="enableAnnotationMapping">
@@ -1687,7 +1687,7 @@
       <tag name="monolog.logger" channel="profiler"/>
       <argument type="service">
         <service class="Symfony\Component\HttpKernel\Profiler\FileProfilerStorage" public="false">
-          <argument>file:/home/haddada/pidev_sprint2/app/cache/dev/profiler</argument>
+          <argument>file:C:/wamp/www/pidev_sprint2/app/cache/dev/profiler</argument>
           <argument></argument>
           <argument></argument>
           <argument>86400</argument>
@@ -2481,7 +2481,7 @@
           <argument>Symfony\Bundle\TwigBundle\TwigDefaultEscapingStrategy</argument>
           <argument>guess</argument>
         </argument>
-        <argument key="cache">/home/haddada/pidev_sprint2/app/cache/dev/twig</argument>
+        <argument key="cache">C:/wamp/www/pidev_sprint2/app/cache/dev/twig</argument>
         <argument key="charset">UTF-8</argument>
         <argument key="paths" type="collection"/>
       </argument>
@@ -2531,7 +2531,7 @@
           <service class="Symfony\Bridge\Twig\Extension\CodeExtension" public="false">
             <tag name="twig.extension"/>
             <argument>null</argument>
-            <argument>/home/haddada/pidev_sprint2/app</argument>
+            <argument>C:\wamp\www\pidev_sprint2\app</argument>
             <argument>UTF-8</argument>
           </service>
         </argument>
@@ -2696,7 +2696,7 @@
       <argument>twig.controller.exception:showAction</argument>
     </service>
     <service id="monolog.handler.main" class="Monolog\Handler\StreamHandler">
-      <argument>/home/haddada/pidev_sprint2/app/logs/dev.log</argument>
+      <argument>C:\wamp\www\pidev_sprint2\app\logs/dev.log</argument>
       <argument>100</argument>
       <argument>true</argument>
       <argument>null</argument>
@@ -2764,7 +2764,7 @@
             </argument>
             <argument type="service">
               <service class="Assetic\Cache\ConfigCache" public="false">
-                <argument>/home/haddada/pidev_sprint2/app/cache/dev/assetic/config</argument>
+                <argument>C:/wamp/www/pidev_sprint2/app/cache/dev/assetic/config</argument>
               </service>
             </argument>
             <argument>true</argument>
@@ -2778,8 +2778,8 @@
             <argument type="collection">
               <argument key="bootstrap_css" type="collection">
                 <argument type="collection">
-                  <argument>/home/haddada/pidev_sprint2/app/../vendor/twbs/bootstrap/less/bootstrap.less</argument>
-                  <argument>/home/haddada/pidev_sprint2/vendor/braincrafted/bootstrap-bundle/Braincrafted/Bundle/BootstrapBundle/DependencyInjection/../Resources/less/form.less</argument>
+                  <argument>C:\wamp\www\pidev_sprint2\app/../vendor/twbs/bootstrap/less/bootstrap.less</argument>
+                  <argument>C:\wamp\www\pidev_sprint2\vendor\braincrafted\bootstrap-bundle\Braincrafted\Bundle\BootstrapBundle\DependencyInjection/../Resources/less/form.less</argument>
                 </argument>
                 <argument type="collection">
                   <argument>less</argument>
@@ -2790,19 +2790,19 @@
               </argument>
               <argument key="bootstrap_js" type="collection">
                 <argument type="collection">
-                  <argument>/home/haddada/pidev_sprint2/app/../vendor/twbs/bootstrap/js/transition.js</argument>
-                  <argument>/home/haddada/pidev_sprint2/app/../vendor/twbs/bootstrap/js/alert.js</argument>
-                  <argument>/home/haddada/pidev_sprint2/app/../vendor/twbs/bootstrap/js/button.js</argument>
-                  <argument>/home/haddada/pidev_sprint2/app/../vendor/twbs/bootstrap/js/carousel.js</argument>
-                  <argument>/home/haddada/pidev_sprint2/app/../vendor/twbs/bootstrap/js/collapse.js</argument>
-                  <argument>/home/haddada/pidev_sprint2/app/../vendor/twbs/bootstrap/js/dropdown.js</argument>
-                  <argument>/home/haddada/pidev_sprint2/app/../vendor/twbs/bootstrap/js/modal.js</argument>
-                  <argument>/home/haddada/pidev_sprint2/app/../vendor/twbs/bootstrap/js/tooltip.js</argument>
-                  <argument>/home/haddada/pidev_sprint2/app/../vendor/twbs/bootstrap/js/popover.js</argument>
-                  <argument>/home/haddada/pidev_sprint2/app/../vendor/twbs/bootstrap/js/scrollspy.js</argument>
-                  <argument>/home/haddada/pidev_sprint2/app/../vendor/twbs/bootstrap/js/tab.js</argument>
-                  <argument>/home/haddada/pidev_sprint2/app/../vendor/twbs/bootstrap/js/affix.js</argument>
-                  <argument>/home/haddada/pidev_sprint2/vendor/braincrafted/bootstrap-bundle/Braincrafted/Bundle/BootstrapBundle/DependencyInjection/../Resources/js/bc-bootstrap-collection.js</argument>
+                  <argument>C:\wamp\www\pidev_sprint2\app/../vendor/twbs/bootstrap/js/transition.js</argument>
+                  <argument>C:\wamp\www\pidev_sprint2\app/../vendor/twbs/bootstrap/js/alert.js</argument>
+                  <argument>C:\wamp\www\pidev_sprint2\app/../vendor/twbs/bootstrap/js/button.js</argument>
+                  <argument>C:\wamp\www\pidev_sprint2\app/../vendor/twbs/bootstrap/js/carousel.js</argument>
+                  <argument>C:\wamp\www\pidev_sprint2\app/../vendor/twbs/bootstrap/js/collapse.js</argument>
+                  <argument>C:\wamp\www\pidev_sprint2\app/../vendor/twbs/bootstrap/js/dropdown.js</argument>
+                  <argument>C:\wamp\www\pidev_sprint2\app/../vendor/twbs/bootstrap/js/modal.js</argument>
+                  <argument>C:\wamp\www\pidev_sprint2\app/../vendor/twbs/bootstrap/js/tooltip.js</argument>
+                  <argument>C:\wamp\www\pidev_sprint2\app/../vendor/twbs/bootstrap/js/popover.js</argument>
+                  <argument>C:\wamp\www\pidev_sprint2\app/../vendor/twbs/bootstrap/js/scrollspy.js</argument>
+                  <argument>C:\wamp\www\pidev_sprint2\app/../vendor/twbs/bootstrap/js/tab.js</argument>
+                  <argument>C:\wamp\www\pidev_sprint2\app/../vendor/twbs/bootstrap/js/affix.js</argument>
+                  <argument>C:\wamp\www\pidev_sprint2\vendor\braincrafted\bootstrap-bundle\Braincrafted\Bundle\BootstrapBundle\DependencyInjection/../Resources/js/bc-bootstrap-collection.js</argument>
                 </argument>
                 <argument type="collection"/>
                 <argument type="collection">
@@ -2811,7 +2811,7 @@
               </argument>
               <argument key="jquery" type="collection">
                 <argument type="collection">
-                  <argument>/home/haddada/pidev_sprint2/app/../vendor/jquery/jquery/jquery-1.10.2.js</argument>
+                  <argument>C:\wamp\www\pidev_sprint2\app/../vendor/jquery/jquery/jquery-1.10.2.js</argument>
                 </argument>
                 <argument type="collection"/>
                 <argument type="collection">
@@ -2830,7 +2830,7 @@
             <tag name="assetic.formula_resource" loader="twig"/>
             <argument type="service" id="templating.loader"/>
             <argument></argument>
-            <argument>/home/haddada/pidev_sprint2/app/Resources/views</argument>
+            <argument>C:\wamp\www\pidev_sprint2\app/Resources/views</argument>
             <argument>/\.[^.]+\.twig$/</argument>
           </service>
         </argument>
@@ -2845,7 +2845,7 @@
           <factory service="service_container" method="getParameterBag"/>
         </service>
       </argument>
-      <argument>/home/haddada/pidev_sprint2/app/../web</argument>
+      <argument>C:\wamp\www\pidev_sprint2\app/../web</argument>
       <argument>true</argument>
       <call method="addWorker">
         <argument type="service">
@@ -2891,7 +2891,7 @@
       <argument type="service" id="profiler" on-invalid="null"/>
     </service>
     <service id="assetic.cache" class="Assetic\Cache\FilesystemCache" public="false">
-      <argument>/home/haddada/pidev_sprint2/app/cache/dev/assetic/assets</argument>
+      <argument>C:/wamp/www/pidev_sprint2/app/cache/dev/assetic/assets</argument>
     </service>
     <service id="assetic.request_listener" class="Symfony\Bundle\AsseticBundle\EventListener\RequestListener">
       <tag name="kernel.event_listener" event="kernel.request" method="onKernelRequest"/>
@@ -2970,17 +2970,17 @@
     </service>
     <service id="doctrine_cache.providers.doctrine.orm.default_metadata_cache" class="Doctrine\Common\Cache\ArrayCache">
       <call method="setNamespace">
-        <argument>sf2orm_default_51093a4cc236512479bbc1c64ee30ff4b804c94c1250677b2508430c18fa3792</argument>
+        <argument>sf2orm_default_e88651855f7375017f305ec8699d625a0149a495c3fa0f29185455cc0ed27e12</argument>
       </call>
     </service>
     <service id="doctrine_cache.providers.doctrine.orm.default_result_cache" class="Doctrine\Common\Cache\ArrayCache">
       <call method="setNamespace">
-        <argument>sf2orm_default_51093a4cc236512479bbc1c64ee30ff4b804c94c1250677b2508430c18fa3792</argument>
+        <argument>sf2orm_default_e88651855f7375017f305ec8699d625a0149a495c3fa0f29185455cc0ed27e12</argument>
       </call>
     </service>
     <service id="doctrine_cache.providers.doctrine.orm.default_query_cache" class="Doctrine\Common\Cache\ArrayCache">
       <call method="setNamespace">
-        <argument>sf2orm_default_51093a4cc236512479bbc1c64ee30ff4b804c94c1250677b2508430c18fa3792</argument>
+        <argument>sf2orm_default_e88651855f7375017f305ec8699d625a0149a495c3fa0f29185455cc0ed27e12</argument>
       </call>
     </service>
     <service id="doctrine.orm.default_entity_listener_resolver" class="Doctrine\ORM\Mapping\DefaultEntityListenerResolver"/>
@@ -3017,9 +3017,9 @@
                     <service class="Doctrine\ORM\Mapping\Driver\AnnotationDriver" public="false">
                       <argument type="service" id="annotation_reader"/>
                       <argument type="collection">
-                        <argument>/home/haddada/pidev_sprint2/src/sprint2/realEstateBundle/Entity</argument>
-                        <argument>/home/haddada/pidev_sprint2/src/sprint2/AuthandlogBundle/Entity</argument>
-                        <argument>/home/haddada/pidev_sprint2/src/sprint2/GerantBundle/Entity</argument>
+                        <argument>C:\wamp\www\pidev_sprint2\src\sprint2\realEstateBundle\Entity</argument>
+                        <argument>C:\wamp\www\pidev_sprint2\src\sprint2\AuthandlogBundle\Entity</argument>
+                        <argument>C:\wamp\www\pidev_sprint2\src\sprint2\GerantBundle\Entity</argument>
                       </argument>
                     </service>
                   </argument>
@@ -3030,9 +3030,9 @@
                     <service class="Doctrine\ORM\Mapping\Driver\AnnotationDriver" public="false">
                       <argument type="service" id="annotation_reader"/>
                       <argument type="collection">
-                        <argument>/home/haddada/pidev_sprint2/src/sprint2/realEstateBundle/Entity</argument>
-                        <argument>/home/haddada/pidev_sprint2/src/sprint2/AuthandlogBundle/Entity</argument>
-                        <argument>/home/haddada/pidev_sprint2/src/sprint2/GerantBundle/Entity</argument>
+                        <argument>C:\wamp\www\pidev_sprint2\src\sprint2\realEstateBundle\Entity</argument>
+                        <argument>C:\wamp\www\pidev_sprint2\src\sprint2\AuthandlogBundle\Entity</argument>
+                        <argument>C:\wamp\www\pidev_sprint2\src\sprint2\GerantBundle\Entity</argument>
                       </argument>
                     </service>
                   </argument>
@@ -3043,9 +3043,9 @@
                     <service class="Doctrine\ORM\Mapping\Driver\AnnotationDriver" public="false">
                       <argument type="service" id="annotation_reader"/>
                       <argument type="collection">
-                        <argument>/home/haddada/pidev_sprint2/src/sprint2/realEstateBundle/Entity</argument>
-                        <argument>/home/haddada/pidev_sprint2/src/sprint2/AuthandlogBundle/Entity</argument>
-                        <argument>/home/haddada/pidev_sprint2/src/sprint2/GerantBundle/Entity</argument>
+                        <argument>C:\wamp\www\pidev_sprint2\src\sprint2\realEstateBundle\Entity</argument>
+                        <argument>C:\wamp\www\pidev_sprint2\src\sprint2\AuthandlogBundle\Entity</argument>
+                        <argument>C:\wamp\www\pidev_sprint2\src\sprint2\GerantBundle\Entity</argument>
                       </argument>
                     </service>
                   </argument>
@@ -3055,7 +3055,7 @@
                   <argument type="service">
                     <service class="Doctrine\ORM\Mapping\Driver\SimplifiedYamlDriver" public="false">
                       <argument type="collection">
-                        <argument key="/home/haddada/pidev_sprint2/src/sprint2/RealEstate/AdminBundle/Resources/config/doctrine">sprint2\RealEstate\AdminBundle\Entity</argument>
+                        <argument key="C:\wamp\www\pidev_sprint2\src\sprint2\RealEstate\AdminBundle\Resources\config\doctrine">sprint2\RealEstate\AdminBundle\Entity</argument>
                       </argument>
                       <call method="setGlobalBasename">
                         <argument>mapping</argument>
@@ -3068,7 +3068,7 @@
             </argument>
           </call>
           <call method="setProxyDir">
-            <argument>/home/haddada/pidev_sprint2/app/cache/dev/doctrine/orm/Proxies</argument>
+            <argument>C:/wamp/www/pidev_sprint2/app/cache/dev/doctrine/orm/Proxies</argument>
           </call>
           <call method="setProxyNamespace">
             <argument>Proxies</argument>
@@ -3377,7 +3377,7 @@
     <service id="fos_rest.allowed_methods_loader" class="FOS\RestBundle\Response\AllowedMethodsLoader\AllowedMethodsRouterLoader">
       <tag name="kernel.cache_warmer"/>
       <argument type="service" id="router"/>
-      <argument>/home/haddada/pidev_sprint2/app/cache/dev/fos_rest</argument>
+      <argument>C:/wamp/www/pidev_sprint2/app/cache/dev/fos_rest</argument>
       <argument>true</argument>
     </service>
     <service id="fos_rest.access_denied_listener" class="FOS\RestBundle\EventListener\AccessDeniedListener">
@@ -3713,7 +3713,7 @@
     <service id="jms_serializer.datetime_handler" class="JMS\Serializer\Handler\DateHandler">
       <tag name="jms_serializer.subscribing_handler"/>
       <argument>Y-m-d\TH:i:sO</argument>
-      <argument>Europe/Berlin</argument>
+      <argument>Europe/Paris</argument>
       <argument>true</argument>
     </service>
     <service id="jms_serializer.array_collection_handler" class="JMS\Serializer\Handler\ArrayCollectionHandler">
@@ -3741,7 +3741,7 @@
       <call method="setCache">
         <argument type="service">
           <service class="Metadata\Cache\FileCache" public="false">
-            <argument>/home/haddada/pidev_sprint2/app/cache/dev/jms_serializer</argument>
+            <argument>C:/wamp/www/pidev_sprint2/app/cache/dev/jms_serializer</argument>
           </service>
         </argument>
       </call>
@@ -4029,7 +4029,7 @@
       <argument>^/bundles|^/_wdt</argument>
     </service>
     <service id="sensio_distribution.webconfigurator" class="Sensio\Bundle\DistributionBundle\Configurator\Configurator">
-      <argument>/home/haddada/pidev_sprint2/app</argument>
+      <argument>C:\wamp\www\pidev_sprint2\app</argument>
       <call method="addStep">
         <argument type="service">
           <service class="Sensio\Bundle\DistributionBundle\Configurator\Step\DoctrineStep" public="false">
@@ -4201,7 +4201,7 @@
       <argument type="service" id="nelmio_api_doc.doc_comment_extractor"/>
     </service>
     <service id="session.storage.filesystem" class="Symfony\Component\HttpFoundation\Session\Storage\MockFileSessionStorage">
-      <argument>/home/haddada/pidev_sprint2/app/cache/dev/sessions</argument>
+      <argument>C:/wamp/www/pidev_sprint2/app/cache/dev/sessions</argument>
       <argument>MOCKSESSID</argument>
       <argument type="service" id="session.storage.metadata_bag"/>
     </service>
@@ -4247,9 +4247,9 @@
     <service id="router" class="Symfony\Bundle\FrameworkBundle\Routing\Router">
       <tag name="monolog.logger" channel="router"/>
       <argument type="service" id="service_container"/>
-      <argument>/home/haddada/pidev_sprint2/app/cache/dev/assetic/routing.yml</argument>
+      <argument>C:/wamp/www/pidev_sprint2/app/cache/dev/assetic/routing.yml</argument>
       <argument type="collection">
-        <argument key="cache_dir">/home/haddada/pidev_sprint2/app/cache/dev</argument>
+        <argument key="cache_dir">C:/wamp/www/pidev_sprint2/app/cache/dev</argument>
         <argument key="debug">true</argument>
         <argument key="generator_class">Symfony\Component\Routing\Generator\UrlGenerator</argument>
         <argument key="generator_base_class">Symfony\Component\Routing\Generator\UrlGenerator</argument>
@@ -4269,7 +4269,7 @@
       <argument type="service">
         <service class="Doctrine\Common\Annotations\AnnotationReader" public="false"/>
       </argument>
-      <argument>/home/haddada/pidev_sprint2/app/cache/dev/annotations</argument>
+      <argument>C:/wamp/www/pidev_sprint2/app/cache/dev/annotations</argument>
       <argument>true</argument>
     </service>
     <service id="security.encoder_factory" class="Symfony\Component\Security\Core\Encoder\EncoderFactory">
@@ -4290,78 +4290,78 @@
       <argument type="service" id="templating.locator"/>
       <argument type="service" id="templating.name_parser"/>
       <call method="addPath">
-        <argument>/home/haddada/pidev_sprint2/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/views</argument>
+        <argument>C:\wamp\www\pidev_sprint2\vendor\symfony\symfony\src\Symfony\Bundle\FrameworkBundle/Resources/views</argument>
         <argument>Framework</argument>
       </call>
       <call method="addPath">
-        <argument>/home/haddada/pidev_sprint2/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Resources/views</argument>
+        <argument>C:\wamp\www\pidev_sprint2\vendor\symfony\symfony\src\Symfony\Bundle\SecurityBundle/Resources/views</argument>
         <argument>Security</argument>
       </call>
       <call method="addPath">
-        <argument>/home/haddada/pidev_sprint2/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views</argument>
+        <argument>C:\wamp\www\pidev_sprint2\vendor\symfony\symfony\src\Symfony\Bundle\TwigBundle/Resources/views</argument>
         <argument>Twig</argument>
       </call>
       <call method="addPath">
-        <argument>/home/haddada/pidev_sprint2/vendor/symfony/swiftmailer-bundle/Resources/views</argument>
+        <argument>C:\wamp\www\pidev_sprint2\vendor\symfony\swiftmailer-bundle/Resources/views</argument>
         <argument>Swiftmailer</argument>
       </call>
       <call method="addPath">
-        <argument>/home/haddada/pidev_sprint2/vendor/doctrine/doctrine-bundle/Resources/views</argument>
+        <argument>C:\wamp\www\pidev_sprint2\vendor\doctrine\doctrine-bundle/Resources/views</argument>
         <argument>Doctrine</argument>
       </call>
       <call method="addPath">
-        <argument>/home/haddada/pidev_sprint2/src/sprint2/realEstateBundle/Resources/views</argument>
+        <argument>C:\wamp\www\pidev_sprint2\src\sprint2\realEstateBundle/Resources/views</argument>
         <argument>realEstate</argument>
       </call>
       <call method="addPath">
-        <argument>/home/haddada/pidev_sprint2/vendor/braincrafted/bootstrap-bundle/Braincrafted/Bundle/BootstrapBundle/Resources/views</argument>
+        <argument>C:\wamp\www\pidev_sprint2\vendor\braincrafted\bootstrap-bundle\Braincrafted\Bundle\BootstrapBundle/Resources/views</argument>
         <argument>BraincraftedBootstrap</argument>
       </call>
       <call method="addPath">
-        <argument>/home/haddada/pidev_sprint2/src/sprint2/RealEstate/AdminBundle/Resources/views</argument>
+        <argument>C:\wamp\www\pidev_sprint2\src\sprint2\RealEstate\AdminBundle/Resources/views</argument>
         <argument>sprint2RealEstateAdmin</argument>
       </call>
       <call method="addPath">
-        <argument>/home/haddada/pidev_sprint2/vendor/nomaya/social-bundle/Nomaya/SocialBundle/Resources/views</argument>
+        <argument>C:\wamp\www\pidev_sprint2\vendor\nomaya\social-bundle\Nomaya\SocialBundle/Resources/views</argument>
         <argument>NomayaSocial</argument>
       </call>
       <call method="addPath">
-        <argument>/home/haddada/pidev_sprint2/src/sprint2/AuthandlogBundle/Resources/views</argument>
+        <argument>C:\wamp\www\pidev_sprint2\src\sprint2\AuthandlogBundle/Resources/views</argument>
         <argument>sprint2Authandlog</argument>
       </call>
       <call method="addPath">
-        <argument>/home/haddada/pidev_sprint2/src/sprint2/GerantBundle/Resources/views</argument>
+        <argument>C:\wamp\www\pidev_sprint2\src\sprint2\GerantBundle/Resources/views</argument>
         <argument>sprint2Gerant</argument>
       </call>
       <call method="addPath">
-        <argument>/home/haddada/pidev_sprint2/src/sprint2/restBundle/Resources/views</argument>
+        <argument>C:\wamp\www\pidev_sprint2\src\sprint2\restBundle/Resources/views</argument>
         <argument>sprint2rest</argument>
       </call>
       <call method="addPath">
-        <argument>/home/haddada/pidev_sprint2/vendor/nelmio/api-doc-bundle/Nelmio/ApiDocBundle/Resources/views</argument>
+        <argument>C:\wamp\www\pidev_sprint2\vendor\nelmio\api-doc-bundle\Nelmio\ApiDocBundle/Resources/views</argument>
         <argument>NelmioApiDoc</argument>
       </call>
       <call method="addPath">
-        <argument>/home/haddada/pidev_sprint2/vendor/symfony/symfony/src/Symfony/Bundle/DebugBundle/Resources/views</argument>
+        <argument>C:\wamp\www\pidev_sprint2\vendor\symfony\symfony\src\Symfony\Bundle\DebugBundle/Resources/views</argument>
         <argument>Debug</argument>
       </call>
       <call method="addPath">
-        <argument>/home/haddada/pidev_sprint2/src/Acme/DemoBundle/Resources/views</argument>
+        <argument>C:\wamp\www\pidev_sprint2\src\Acme\DemoBundle/Resources/views</argument>
         <argument>AcmeDemo</argument>
       </call>
       <call method="addPath">
-        <argument>/home/haddada/pidev_sprint2/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views</argument>
+        <argument>C:\wamp\www\pidev_sprint2\vendor\symfony\symfony\src\Symfony\Bundle\WebProfilerBundle/Resources/views</argument>
         <argument>WebProfiler</argument>
       </call>
       <call method="addPath">
-        <argument>/home/haddada/pidev_sprint2/vendor/sensio/distribution-bundle/Sensio/Bundle/DistributionBundle/Resources/views</argument>
+        <argument>C:\wamp\www\pidev_sprint2\vendor\sensio\distribution-bundle\Sensio\Bundle\DistributionBundle/Resources/views</argument>
         <argument>SensioDistribution</argument>
       </call>
       <call method="addPath">
-        <argument>/home/haddada/pidev_sprint2/app/Resources/views</argument>
+        <argument>C:\wamp\www\pidev_sprint2\app/Resources/views</argument>
       </call>
       <call method="addPath">
-        <argument>/home/haddada/pidev_sprint2/vendor/symfony/symfony/src/Symfony/Bridge/Twig/Resources/views/Form</argument>
+        <argument>C:\wamp\www\pidev_sprint2\vendor\symfony\symfony\src\Symfony\Bridge\Twig/Resources/views/Form</argument>
       </call>
     </service>
     <service id="logger" class="Symfony\Bridge\Monolog\Logger">
@@ -4470,31 +4470,31 @@
                 <argument type="service">
                   <service class="Metadata\Driver\FileLocator" public="false">
                     <argument type="collection">
-                      <argument key="Symfony\Bundle\FrameworkBundle">/home/haddada/pidev_sprint2/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/config/serializer</argument>
-                      <argument key="Symfony\Bundle\SecurityBundle">/home/haddada/pidev_sprint2/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Resources/config/serializer</argument>
-                      <argument key="Symfony\Bundle\TwigBundle">/home/haddada/pidev_sprint2/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/config/serializer</argument>
-                      <argument key="Symfony\Bundle\MonologBundle">/home/haddada/pidev_sprint2/vendor/symfony/monolog-bundle/Resources/config/serializer</argument>
-                      <argument key="Symfony\Bundle\SwiftmailerBundle">/home/haddada/pidev_sprint2/vendor/symfony/swiftmailer-bundle/Resources/config/serializer</argument>
-                      <argument key="Symfony\Bundle\AsseticBundle">/home/haddada/pidev_sprint2/vendor/symfony/assetic-bundle/Resources/config/serializer</argument>
-                      <argument key="Doctrine\Bundle\DoctrineBundle">/home/haddada/pidev_sprint2/vendor/doctrine/doctrine-bundle/Resources/config/serializer</argument>
-                      <argument key="Sensio\Bundle\FrameworkExtraBundle">/home/haddada/pidev_sprint2/vendor/sensio/framework-extra-bundle/Sensio/Bundle/FrameworkExtraBundle/Resources/config/serializer</argument>
-                      <argument key="AppBundle">/home/haddada/pidev_sprint2/src/AppBundle/Resources/config/serializer</argument>
-                      <argument key="sprint2\realEstateBundle">/home/haddada/pidev_sprint2/src/sprint2/realEstateBundle/Resources/config/serializer</argument>
-                      <argument key="Braincrafted\Bundle\BootstrapBundle">/home/haddada/pidev_sprint2/vendor/braincrafted/bootstrap-bundle/Braincrafted/Bundle/BootstrapBundle/Resources/config/serializer</argument>
-                      <argument key="sprint2\RealEstate\AdminBundle">/home/haddada/pidev_sprint2/src/sprint2/RealEstate/AdminBundle/Resources/config/serializer</argument>
-                      <argument key="Ob\HighchartsBundle">/home/haddada/pidev_sprint2/vendor/ob/highcharts-bundle/Resources/config/serializer</argument>
-                      <argument key="Nomaya\SocialBundle">/home/haddada/pidev_sprint2/vendor/nomaya/social-bundle/Nomaya/SocialBundle/Resources/config/serializer</argument>
-                      <argument key="sprint2\AuthandlogBundle">/home/haddada/pidev_sprint2/src/sprint2/AuthandlogBundle/Resources/config/serializer</argument>
-                      <argument key="sprint2\GerantBundle">/home/haddada/pidev_sprint2/src/sprint2/GerantBundle/Resources/config/serializer</argument>
-                      <argument key="sprint2\restBundle">/home/haddada/pidev_sprint2/src/sprint2/restBundle/Resources/config/serializer</argument>
-                      <argument key="FOS\RestBundle">/home/haddada/pidev_sprint2/vendor/friendsofsymfony/rest-bundle/FOS/RestBundle/Resources/config/serializer</argument>
-                      <argument key="JMS\SerializerBundle">/home/haddada/pidev_sprint2/vendor/jms/serializer-bundle/JMS/SerializerBundle/Resources/config/serializer</argument>
-                      <argument key="Nelmio\ApiDocBundle">/home/haddada/pidev_sprint2/vendor/nelmio/api-doc-bundle/Nelmio/ApiDocBundle/Resources/config/serializer</argument>
-                      <argument key="Symfony\Bundle\DebugBundle">/home/haddada/pidev_sprint2/vendor/symfony/symfony/src/Symfony/Bundle/DebugBundle/Resources/config/serializer</argument>
-                      <argument key="Acme\DemoBundle">/home/haddada/pidev_sprint2/src/Acme/DemoBundle/Resources/config/serializer</argument>
-                      <argument key="Symfony\Bundle\WebProfilerBundle">/home/haddada/pidev_sprint2/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/config/serializer</argument>
-                      <argument key="Sensio\Bundle\DistributionBundle">/home/haddada/pidev_sprint2/vendor/sensio/distribution-bundle/Sensio/Bundle/DistributionBundle/Resources/config/serializer</argument>
-                      <argument key="Sensio\Bundle\GeneratorBundle">/home/haddada/pidev_sprint2/vendor/sensio/generator-bundle/Sensio/Bundle/GeneratorBundle/Resources/config/serializer</argument>
+                      <argument key="Symfony\Bundle\FrameworkBundle">C:\wamp\www\pidev_sprint2\vendor\symfony\symfony\src\Symfony\Bundle\FrameworkBundle/Resources/config/serializer</argument>
+                      <argument key="Symfony\Bundle\SecurityBundle">C:\wamp\www\pidev_sprint2\vendor\symfony\symfony\src\Symfony\Bundle\SecurityBundle/Resources/config/serializer</argument>
+                      <argument key="Symfony\Bundle\TwigBundle">C:\wamp\www\pidev_sprint2\vendor\symfony\symfony\src\Symfony\Bundle\TwigBundle/Resources/config/serializer</argument>
+                      <argument key="Symfony\Bundle\MonologBundle">C:\wamp\www\pidev_sprint2\vendor\symfony\monolog-bundle/Resources/config/serializer</argument>
+                      <argument key="Symfony\Bundle\SwiftmailerBundle">C:\wamp\www\pidev_sprint2\vendor\symfony\swiftmailer-bundle/Resources/config/serializer</argument>
+                      <argument key="Symfony\Bundle\AsseticBundle">C:\wamp\www\pidev_sprint2\vendor\symfony\assetic-bundle/Resources/config/serializer</argument>
+                      <argument key="Doctrine\Bundle\DoctrineBundle">C:\wamp\www\pidev_sprint2\vendor\doctrine\doctrine-bundle/Resources/config/serializer</argument>
+                      <argument key="Sensio\Bundle\FrameworkExtraBundle">C:\wamp\www\pidev_sprint2\vendor\sensio\framework-extra-bundle\Sensio\Bundle\FrameworkExtraBundle/Resources/config/serializer</argument>
+                      <argument key="AppBundle">C:\wamp\www\pidev_sprint2\src\AppBundle/Resources/config/serializer</argument>
+                      <argument key="sprint2\realEstateBundle">C:\wamp\www\pidev_sprint2\src\sprint2\realEstateBundle/Resources/config/serializer</argument>
+                      <argument key="Braincrafted\Bundle\BootstrapBundle">C:\wamp\www\pidev_sprint2\vendor\braincrafted\bootstrap-bundle\Braincrafted\Bundle\BootstrapBundle/Resources/config/serializer</argument>
+                      <argument key="sprint2\RealEstate\AdminBundle">C:\wamp\www\pidev_sprint2\src\sprint2\RealEstate\AdminBundle/Resources/config/serializer</argument>
+                      <argument key="Ob\HighchartsBundle">C:\wamp\www\pidev_sprint2\vendor\ob\highcharts-bundle/Resources/config/serializer</argument>
+                      <argument key="Nomaya\SocialBundle">C:\wamp\www\pidev_sprint2\vendor\nomaya\social-bundle\Nomaya\SocialBundle/Resources/config/serializer</argument>
+                      <argument key="sprint2\AuthandlogBundle">C:\wamp\www\pidev_sprint2\src\sprint2\AuthandlogBundle/Resources/config/serializer</argument>
+                      <argument key="sprint2\GerantBundle">C:\wamp\www\pidev_sprint2\src\sprint2\GerantBundle/Resources/config/serializer</argument>
+                      <argument key="sprint2\restBundle">C:\wamp\www\pidev_sprint2\src\sprint2\restBundle/Resources/config/serializer</argument>
+                      <argument key="FOS\RestBundle">C:\wamp\www\pidev_sprint2\vendor\friendsofsymfony\rest-bundle\FOS\RestBundle/Resources/config/serializer</argument>
+                      <argument key="JMS\SerializerBundle">C:\wamp\www\pidev_sprint2\vendor\jms\serializer-bundle\JMS\SerializerBundle/Resources/config/serializer</argument>
+                      <argument key="Nelmio\ApiDocBundle">C:\wamp\www\pidev_sprint2\vendor\nelmio\api-doc-bundle\Nelmio\ApiDocBundle/Resources/config/serializer</argument>
+                      <argument key="Symfony\Bundle\DebugBundle">C:\wamp\www\pidev_sprint2\vendor\symfony\symfony\src\Symfony\Bundle\DebugBundle/Resources/config/serializer</argument>
+                      <argument key="Acme\DemoBundle">C:\wamp\www\pidev_sprint2\src\Acme\DemoBundle/Resources/config/serializer</argument>
+                      <argument key="Symfony\Bundle\WebProfilerBundle">C:\wamp\www\pidev_sprint2\vendor\symfony\symfony\src\Symfony\Bundle\WebProfilerBundle/Resources/config/serializer</argument>
+                      <argument key="Sensio\Bundle\DistributionBundle">C:\wamp\www\pidev_sprint2\vendor\sensio\distribution-bundle\Sensio\Bundle\DistributionBundle/Resources/config/serializer</argument>
+                      <argument key="Sensio\Bundle\GeneratorBundle">C:\wamp\www\pidev_sprint2\vendor\sensio\generator-bundle\Sensio\Bundle\GeneratorBundle/Resources/config/serializer</argument>
                     </argument>
                   </service>
                 </argument>
@@ -4505,31 +4505,31 @@
                 <argument type="service">
                   <service class="Metadata\Driver\FileLocator" public="false">
                     <argument type="collection">
-                      <argument key="Symfony\Bundle\FrameworkBundle">/home/haddada/pidev_sprint2/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/config/serializer</argument>
-                      <argument key="Symfony\Bundle\SecurityBundle">/home/haddada/pidev_sprint2/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Resources/config/serializer</argument>
-                      <argument key="Symfony\Bundle\TwigBundle">/home/haddada/pidev_sprint2/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/config/serializer</argument>
-                      <argument key="Symfony\Bundle\MonologBundle">/home/haddada/pidev_sprint2/vendor/symfony/monolog-bundle/Resources/config/serializer</argument>
-                      <argument key="Symfony\Bundle\SwiftmailerBundle">/home/haddada/pidev_sprint2/vendor/symfony/swiftmailer-bundle/Resources/config/serializer</argument>
-                      <argument key="Symfony\Bundle\AsseticBundle">/home/haddada/pidev_sprint2/vendor/symfony/assetic-bundle/Resources/config/serializer</argument>
-                      <argument key="Doctrine\Bundle\DoctrineBundle">/home/haddada/pidev_sprint2/vendor/doctrine/doctrine-bundle/Resources/config/serializer</argument>
-                      <argument key="Sensio\Bundle\FrameworkExtraBundle">/home/haddada/pidev_sprint2/vendor/sensio/framework-extra-bundle/Sensio/Bundle/FrameworkExtraBundle/Resources/config/serializer</argument>
-                      <argument key="AppBundle">/home/haddada/pidev_sprint2/src/AppBundle/Resources/config/serializer</argument>
-                      <argument key="sprint2\realEstateBundle">/home/haddada/pidev_sprint2/src/sprint2/realEstateBundle/Resources/config/serializer</argument>
-                      <argument key="Braincrafted\Bundle\BootstrapBundle">/home/haddada/pidev_sprint2/vendor/braincrafted/bootstrap-bundle/Braincrafted/Bundle/BootstrapBundle/Resources/config/serializer</argument>
-                      <argument key="sprint2\RealEstate\AdminBundle">/home/haddada/pidev_sprint2/src/sprint2/RealEstate/AdminBundle/Resources/config/serializer</argument>
-                      <argument key="Ob\HighchartsBundle">/home/haddada/pidev_sprint2/vendor/ob/highcharts-bundle/Resources/config/serializer</argument>
-                      <argument key="Nomaya\SocialBundle">/home/haddada/pidev_sprint2/vendor/nomaya/social-bundle/Nomaya/SocialBundle/Resources/config/serializer</argument>
-                      <argument key="sprint2\AuthandlogBundle">/home/haddada/pidev_sprint2/src/sprint2/AuthandlogBundle/Resources/config/serializer</argument>
-                      <argument key="sprint2\GerantBundle">/home/haddada/pidev_sprint2/src/sprint2/GerantBundle/Resources/config/serializer</argument>
-                      <argument key="sprint2\restBundle">/home/haddada/pidev_sprint2/src/sprint2/restBundle/Resources/config/serializer</argument>
-                      <argument key="FOS\RestBundle">/home/haddada/pidev_sprint2/vendor/friendsofsymfony/rest-bundle/FOS/RestBundle/Resources/config/serializer</argument>
-                      <argument key="JMS\SerializerBundle">/home/haddada/pidev_sprint2/vendor/jms/serializer-bundle/JMS/SerializerBundle/Resources/config/serializer</argument>
-                      <argument key="Nelmio\ApiDocBundle">/home/haddada/pidev_sprint2/vendor/nelmio/api-doc-bundle/Nelmio/ApiDocBundle/Resources/config/serializer</argument>
-                      <argument key="Symfony\Bundle\DebugBundle">/home/haddada/pidev_sprint2/vendor/symfony/symfony/src/Symfony/Bundle/DebugBundle/Resources/config/serializer</argument>
-                      <argument key="Acme\DemoBundle">/home/haddada/pidev_sprint2/src/Acme/DemoBundle/Resources/config/serializer</argument>
-                      <argument key="Symfony\Bundle\WebProfilerBundle">/home/haddada/pidev_sprint2/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/config/serializer</argument>
-                      <argument key="Sensio\Bundle\DistributionBundle">/home/haddada/pidev_sprint2/vendor/sensio/distribution-bundle/Sensio/Bundle/DistributionBundle/Resources/config/serializer</argument>
-                      <argument key="Sensio\Bundle\GeneratorBundle">/home/haddada/pidev_sprint2/vendor/sensio/generator-bundle/Sensio/Bundle/GeneratorBundle/Resources/config/serializer</argument>
+                      <argument key="Symfony\Bundle\FrameworkBundle">C:\wamp\www\pidev_sprint2\vendor\symfony\symfony\src\Symfony\Bundle\FrameworkBundle/Resources/config/serializer</argument>
+                      <argument key="Symfony\Bundle\SecurityBundle">C:\wamp\www\pidev_sprint2\vendor\symfony\symfony\src\Symfony\Bundle\SecurityBundle/Resources/config/serializer</argument>
+                      <argument key="Symfony\Bundle\TwigBundle">C:\wamp\www\pidev_sprint2\vendor\symfony\symfony\src\Symfony\Bundle\TwigBundle/Resources/config/serializer</argument>
+                      <argument key="Symfony\Bundle\MonologBundle">C:\wamp\www\pidev_sprint2\vendor\symfony\monolog-bundle/Resources/config/serializer</argument>
+                      <argument key="Symfony\Bundle\SwiftmailerBundle">C:\wamp\www\pidev_sprint2\vendor\symfony\swiftmailer-bundle/Resources/config/serializer</argument>
+                      <argument key="Symfony\Bundle\AsseticBundle">C:\wamp\www\pidev_sprint2\vendor\symfony\assetic-bundle/Resources/config/serializer</argument>
+                      <argument key="Doctrine\Bundle\DoctrineBundle">C:\wamp\www\pidev_sprint2\vendor\doctrine\doctrine-bundle/Resources/config/serializer</argument>
+                      <argument key="Sensio\Bundle\FrameworkExtraBundle">C:\wamp\www\pidev_sprint2\vendor\sensio\framework-extra-bundle\Sensio\Bundle\FrameworkExtraBundle/Resources/config/serializer</argument>
+                      <argument key="AppBundle">C:\wamp\www\pidev_sprint2\src\AppBundle/Resources/config/serializer</argument>
+                      <argument key="sprint2\realEstateBundle">C:\wamp\www\pidev_sprint2\src\sprint2\realEstateBundle/Resources/config/serializer</argument>
+                      <argument key="Braincrafted\Bundle\BootstrapBundle">C:\wamp\www\pidev_sprint2\vendor\braincrafted\bootstrap-bundle\Braincrafted\Bundle\BootstrapBundle/Resources/config/serializer</argument>
+                      <argument key="sprint2\RealEstate\AdminBundle">C:\wamp\www\pidev_sprint2\src\sprint2\RealEstate\AdminBundle/Resources/config/serializer</argument>
+                      <argument key="Ob\HighchartsBundle">C:\wamp\www\pidev_sprint2\vendor\ob\highcharts-bundle/Resources/config/serializer</argument>
+                      <argument key="Nomaya\SocialBundle">C:\wamp\www\pidev_sprint2\vendor\nomaya\social-bundle\Nomaya\SocialBundle/Resources/config/serializer</argument>
+                      <argument key="sprint2\AuthandlogBundle">C:\wamp\www\pidev_sprint2\src\sprint2\AuthandlogBundle/Resources/config/serializer</argument>
+                      <argument key="sprint2\GerantBundle">C:\wamp\www\pidev_sprint2\src\sprint2\GerantBundle/Resources/config/serializer</argument>
+                      <argument key="sprint2\restBundle">C:\wamp\www\pidev_sprint2\src\sprint2\restBundle/Resources/config/serializer</argument>
+                      <argument key="FOS\RestBundle">C:\wamp\www\pidev_sprint2\vendor\friendsofsymfony\rest-bundle\FOS\RestBundle/Resources/config/serializer</argument>
+                      <argument key="JMS\SerializerBundle">C:\wamp\www\pidev_sprint2\vendor\jms\serializer-bundle\JMS\SerializerBundle/Resources/config/serializer</argument>
+                      <argument key="Nelmio\ApiDocBundle">C:\wamp\www\pidev_sprint2\vendor\nelmio\api-doc-bundle\Nelmio\ApiDocBundle/Resources/config/serializer</argument>
+                      <argument key="Symfony\Bundle\DebugBundle">C:\wamp\www\pidev_sprint2\vendor\symfony\symfony\src\Symfony\Bundle\DebugBundle/Resources/config/serializer</argument>
+                      <argument key="Acme\DemoBundle">C:\wamp\www\pidev_sprint2\src\Acme\DemoBundle/Resources/config/serializer</argument>
+                      <argument key="Symfony\Bundle\WebProfilerBundle">C:\wamp\www\pidev_sprint2\vendor\symfony\symfony\src\Symfony\Bundle\WebProfilerBundle/Resources/config/serializer</argument>
+                      <argument key="Sensio\Bundle\DistributionBundle">C:\wamp\www\pidev_sprint2\vendor\sensio\distribution-bundle\Sensio\Bundle\DistributionBundle/Resources/config/serializer</argument>
+                      <argument key="Sensio\Bundle\GeneratorBundle">C:\wamp\www\pidev_sprint2\vendor\sensio\generator-bundle\Sensio\Bundle\GeneratorBundle/Resources/config/serializer</argument>
                     </argument>
                   </service>
                 </argument>
@@ -4540,31 +4540,31 @@
                 <argument type="service">
                   <service class="Metadata\Driver\FileLocator" public="false">
                     <argument type="collection">
-                      <argument key="Symfony\Bundle\FrameworkBundle">/home/haddada/pidev_sprint2/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/config/serializer</argument>
-                      <argument key="Symfony\Bundle\SecurityBundle">/home/haddada/pidev_sprint2/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Resources/config/serializer</argument>
-                      <argument key="Symfony\Bundle\TwigBundle">/home/haddada/pidev_sprint2/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/config/serializer</argument>
-                      <argument key="Symfony\Bundle\MonologBundle">/home/haddada/pidev_sprint2/vendor/symfony/monolog-bundle/Resources/config/serializer</argument>
-                      <argument key="Symfony\Bundle\SwiftmailerBundle">/home/haddada/pidev_sprint2/vendor/symfony/swiftmailer-bundle/Resources/config/serializer</argument>
-                      <argument key="Symfony\Bundle\AsseticBundle">/home/haddada/pidev_sprint2/vendor/symfony/assetic-bundle/Resources/config/serializer</argument>
-                      <argument key="Doctrine\Bundle\DoctrineBundle">/home/haddada/pidev_sprint2/vendor/doctrine/doctrine-bundle/Resources/config/serializer</argument>
-                      <argument key="Sensio\Bundle\FrameworkExtraBundle">/home/haddada/pidev_sprint2/vendor/sensio/framework-extra-bundle/Sensio/Bundle/FrameworkExtraBundle/Resources/config/serializer</argument>
-                      <argument key="AppBundle">/home/haddada/pidev_sprint2/src/AppBundle/Resources/config/serializer</argument>
-                      <argument key="sprint2\realEstateBundle">/home/haddada/pidev_sprint2/src/sprint2/realEstateBundle/Resources/config/serializer</argument>
-                      <argument key="Braincrafted\Bundle\BootstrapBundle">/home/haddada/pidev_sprint2/vendor/braincrafted/bootstrap-bundle/Braincrafted/Bundle/BootstrapBundle/Resources/config/serializer</argument>
-                      <argument key="sprint2\RealEstate\AdminBundle">/home/haddada/pidev_sprint2/src/sprint2/RealEstate/AdminBundle/Resources/config/serializer</argument>
-                      <argument key="Ob\HighchartsBundle">/home/haddada/pidev_sprint2/vendor/ob/highcharts-bundle/Resources/config/serializer</argument>
-                      <argument key="Nomaya\SocialBundle">/home/haddada/pidev_sprint2/vendor/nomaya/social-bundle/Nomaya/SocialBundle/Resources/config/serializer</argument>
-                      <argument key="sprint2\AuthandlogBundle">/home/haddada/pidev_sprint2/src/sprint2/AuthandlogBundle/Resources/config/serializer</argument>
-                      <argument key="sprint2\GerantBundle">/home/haddada/pidev_sprint2/src/sprint2/GerantBundle/Resources/config/serializer</argument>
-                      <argument key="sprint2\restBundle">/home/haddada/pidev_sprint2/src/sprint2/restBundle/Resources/config/serializer</argument>
-                      <argument key="FOS\RestBundle">/home/haddada/pidev_sprint2/vendor/friendsofsymfony/rest-bundle/FOS/RestBundle/Resources/config/serializer</argument>
-                      <argument key="JMS\SerializerBundle">/home/haddada/pidev_sprint2/vendor/jms/serializer-bundle/JMS/SerializerBundle/Resources/config/serializer</argument>
-                      <argument key="Nelmio\ApiDocBundle">/home/haddada/pidev_sprint2/vendor/nelmio/api-doc-bundle/Nelmio/ApiDocBundle/Resources/config/serializer</argument>
-                      <argument key="Symfony\Bundle\DebugBundle">/home/haddada/pidev_sprint2/vendor/symfony/symfony/src/Symfony/Bundle/DebugBundle/Resources/config/serializer</argument>
-                      <argument key="Acme\DemoBundle">/home/haddada/pidev_sprint2/src/Acme/DemoBundle/Resources/config/serializer</argument>
-                      <argument key="Symfony\Bundle\WebProfilerBundle">/home/haddada/pidev_sprint2/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/config/serializer</argument>
-                      <argument key="Sensio\Bundle\DistributionBundle">/home/haddada/pidev_sprint2/vendor/sensio/distribution-bundle/Sensio/Bundle/DistributionBundle/Resources/config/serializer</argument>
-                      <argument key="Sensio\Bundle\GeneratorBundle">/home/haddada/pidev_sprint2/vendor/sensio/generator-bundle/Sensio/Bundle/GeneratorBundle/Resources/config/serializer</argument>
+                      <argument key="Symfony\Bundle\FrameworkBundle">C:\wamp\www\pidev_sprint2\vendor\symfony\symfony\src\Symfony\Bundle\FrameworkBundle/Resources/config/serializer</argument>
+                      <argument key="Symfony\Bundle\SecurityBundle">C:\wamp\www\pidev_sprint2\vendor\symfony\symfony\src\Symfony\Bundle\SecurityBundle/Resources/config/serializer</argument>
+                      <argument key="Symfony\Bundle\TwigBundle">C:\wamp\www\pidev_sprint2\vendor\symfony\symfony\src\Symfony\Bundle\TwigBundle/Resources/config/serializer</argument>
+                      <argument key="Symfony\Bundle\MonologBundle">C:\wamp\www\pidev_sprint2\vendor\symfony\monolog-bundle/Resources/config/serializer</argument>
+                      <argument key="Symfony\Bundle\SwiftmailerBundle">C:\wamp\www\pidev_sprint2\vendor\symfony\swiftmailer-bundle/Resources/config/serializer</argument>
+                      <argument key="Symfony\Bundle\AsseticBundle">C:\wamp\www\pidev_sprint2\vendor\symfony\assetic-bundle/Resources/config/serializer</argument>
+                      <argument key="Doctrine\Bundle\DoctrineBundle">C:\wamp\www\pidev_sprint2\vendor\doctrine\doctrine-bundle/Resources/config/serializer</argument>
+                      <argument key="Sensio\Bundle\FrameworkExtraBundle">C:\wamp\www\pidev_sprint2\vendor\sensio\framework-extra-bundle\Sensio\Bundle\FrameworkExtraBundle/Resources/config/serializer</argument>
+                      <argument key="AppBundle">C:\wamp\www\pidev_sprint2\src\AppBundle/Resources/config/serializer</argument>
+                      <argument key="sprint2\realEstateBundle">C:\wamp\www\pidev_sprint2\src\sprint2\realEstateBundle/Resources/config/serializer</argument>
+                      <argument key="Braincrafted\Bundle\BootstrapBundle">C:\wamp\www\pidev_sprint2\vendor\braincrafted\bootstrap-bundle\Braincrafted\Bundle\BootstrapBundle/Resources/config/serializer</argument>
+                      <argument key="sprint2\RealEstate\AdminBundle">C:\wamp\www\pidev_sprint2\src\sprint2\RealEstate\AdminBundle/Resources/config/serializer</argument>
+                      <argument key="Ob\HighchartsBundle">C:\wamp\www\pidev_sprint2\vendor\ob\highcharts-bundle/Resources/config/serializer</argument>
+                      <argument key="Nomaya\SocialBundle">C:\wamp\www\pidev_sprint2\vendor\nomaya\social-bundle\Nomaya\SocialBundle/Resources/config/serializer</argument>
+                      <argument key="sprint2\AuthandlogBundle">C:\wamp\www\pidev_sprint2\src\sprint2\AuthandlogBundle/Resources/config/serializer</argument>
+                      <argument key="sprint2\GerantBundle">C:\wamp\www\pidev_sprint2\src\sprint2\GerantBundle/Resources/config/serializer</argument>
+                      <argument key="sprint2\restBundle">C:\wamp\www\pidev_sprint2\src\sprint2\restBundle/Resources/config/serializer</argument>
+                      <argument key="FOS\RestBundle">C:\wamp\www\pidev_sprint2\vendor\friendsofsymfony\rest-bundle\FOS\RestBundle/Resources/config/serializer</argument>
+                      <argument key="JMS\SerializerBundle">C:\wamp\www\pidev_sprint2\vendor\jms\serializer-bundle\JMS\SerializerBundle/Resources/config/serializer</argument>
+                      <argument key="Nelmio\ApiDocBundle">C:\wamp\www\pidev_sprint2\vendor\nelmio\api-doc-bundle\Nelmio\ApiDocBundle/Resources/config/serializer</argument>
+                      <argument key="Symfony\Bundle\DebugBundle">C:\wamp\www\pidev_sprint2\vendor\symfony\symfony\src\Symfony\Bundle\DebugBundle/Resources/config/serializer</argument>
+                      <argument key="Acme\DemoBundle">C:\wamp\www\pidev_sprint2\src\Acme\DemoBundle/Resources/config/serializer</argument>
+                      <argument key="Symfony\Bundle\WebProfilerBundle">C:\wamp\www\pidev_sprint2\vendor\symfony\symfony\src\Symfony\Bundle\WebProfilerBundle/Resources/config/serializer</argument>
+                      <argument key="Sensio\Bundle\DistributionBundle">C:\wamp\www\pidev_sprint2\vendor\sensio\distribution-bundle\Sensio\Bundle\DistributionBundle/Resources/config/serializer</argument>
+                      <argument key="Sensio\Bundle\GeneratorBundle">C:\wamp\www\pidev_sprint2\vendor\sensio\generator-bundle\Sensio\Bundle\GeneratorBundle/Resources/config/serializer</argument>
                     </argument>
                   </service>
                 </argument>
