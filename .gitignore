@@ -38,3 +38,4 @@ app/cache/dev/profiler/index.csv
 app/logs/dev.log
 *.log
 README.md
+*.log
