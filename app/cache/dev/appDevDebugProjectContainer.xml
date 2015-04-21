@@ -850,6 +850,8 @@
     <parameter key="nelmio_api_doc.swagger.model_naming_strategy">dot_notation</parameter>
     <parameter key="rest.offre.handler.class">sprint2\restBundle\Handler\offreHandler</parameter>
     <parameter key="rest.offre.class">sprint2\realEstateBundle\Entity\Offre</parameter>
+    <parameter key="rest.archive.handler.class">sprint2\restBundle\Handler\archiveHandler</parameter>
+    <parameter key="rest.archive.class">sprint2\RealEstate\AdminBundle\Entity\Archive</parameter>
     <parameter key="web_profiler.controller.profiler.class">Symfony\Bundle\WebProfilerBundle\Controller\ProfilerController</parameter>
     <parameter key="web_profiler.controller.router.class">Symfony\Bundle\WebProfilerBundle\Controller\RouterController</parameter>
     <parameter key="web_profiler.controller.exception.class">Symfony\Bundle\WebProfilerBundle\Controller\ExceptionController</parameter>
@@ -3935,6 +3937,11 @@
     <service id="rest.offre.handler" class="sprint2\restBundle\Handler\offreHandler">
       <argument type="service" id="doctrine.orm.default_entity_manager"/>
       <argument>sprint2\realEstateBundle\Entity\Offre</argument>
+      <argument type="service" id="form.factory"/>
+    </service>
+    <service id="rest.archive.handler" class="sprint2\restBundle\Handler\archiveHandler">
+      <argument type="service" id="doctrine.orm.default_entity_manager"/>
+      <argument>sprint2\RealEstate\AdminBundle\Entity\Archive</argument>
       <argument type="service" id="form.factory"/>
     </service>
     <service id="twig.extension.acme.demo" class="Acme\DemoBundle\Twig\Extension\DemoExtension" public="false">
