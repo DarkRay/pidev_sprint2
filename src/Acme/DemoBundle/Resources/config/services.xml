@@ -7,12 +7,20 @@
     <parameters>
         <parameter key="rest.offre.handler.class">sprint2\restBundle\Handler\offreHandler</parameter>
         <parameter key="rest.offre.class">sprint2\realEstateBundle\Entity\Offre</parameter>
+        <parameter key="rest.archive.handler.class">sprint2\restBundle\Handler\archiveHandler</parameter>
+        <parameter key="rest.archive.class">sprint2\RealEstate\AdminBundle\Entity\Archive</parameter>
     </parameters>
 
     <services>
         <service id="rest.offre.handler" class="%rest.offre.handler.class%">
             <argument type="service" id="doctrine.orm.entity_manager" />
             <argument>%rest.offre.class%</argument>
+            <argument type="service" id="form.factory"></argument>
+        </service>
+
+        <service id="rest.archive.handler" class="%rest.archive.handler.class%">
+            <argument type="service" id="doctrine.orm.entity_manager" />
+            <argument>%rest.archive.class%</argument>
             <argument type="service" id="form.factory"></argument>
         </service>
 
