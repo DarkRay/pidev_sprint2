@@ -6,3 +6,8 @@ sprint2rest_getOffres:
     type: rest
     prefix: /v1
     resource: sprint2\restBundle\Controller\offreRestController
+
+sprint2rest_getArchives:
+    type: rest
+    prefix: /v1
+    resource: sprint2\restBundle\Controller\archiveRestController

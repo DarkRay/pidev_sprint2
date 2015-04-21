@@ -232,6 +232,7 @@ class appDevDebugProjectContainer extends Container
             'request' => 'getRequestService',
             'request_stack' => 'getRequestStackService',
             'response_listener' => 'getResponseListenerService',
+            'rest.archive.handler' => 'getRest_Archive_HandlerService',
             'rest.offre.handler' => 'getRest_Offre_HandlerService',
             'router' => 'getRouterService',
             'router.request_context' => 'getRouter_RequestContextService',
@@ -3098,6 +3099,19 @@ class appDevDebugProjectContainer extends Container
     }
 
     /**
+     * Gets the 'rest.archive.handler' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return \sprint2\restBundle\Handler\archiveHandler A sprint2\restBundle\Handler\archiveHandler instance.
+     */
+    protected function getRest_Archive_HandlerService()
+    {
+        return $this->services['rest.archive.handler'] = new \sprint2\restBundle\Handler\archiveHandler($this->get('doctrine.orm.default_entity_manager'), 'sprint2\\RealEstate\\AdminBundle\\Entity\\Archive', $this->get('form.factory'));
+    }
+
+    /**
      * Gets the 'rest.offre.handler' service.
      *
      * This service is shared.
@@ -5926,6 +5940,8 @@ class appDevDebugProjectContainer extends Container
             'nelmio_api_doc.swagger.model_naming_strategy' => 'dot_notation',
             'rest.offre.handler.class' => 'sprint2\\restBundle\\Handler\\offreHandler',
             'rest.offre.class' => 'sprint2\\realEstateBundle\\Entity\\Offre',
+            'rest.archive.handler.class' => 'sprint2\\restBundle\\Handler\\archiveHandler',
+            'rest.archive.class' => 'sprint2\\RealEstate\\AdminBundle\\Entity\\Archive',
             'web_profiler.controller.profiler.class' => 'Symfony\\Bundle\\WebProfilerBundle\\Controller\\ProfilerController',
             'web_profiler.controller.router.class' => 'Symfony\\Bundle\\WebProfilerBundle\\Controller\\RouterController',
             'web_profiler.controller.exception.class' => 'Symfony\\Bundle\\WebProfilerBundle\\Controller\\ExceptionController',
