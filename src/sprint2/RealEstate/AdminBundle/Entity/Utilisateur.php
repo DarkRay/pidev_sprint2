@@ -60,11 +60,8 @@ class Utilisateur
     private $numfix;
 
     /**
-     *
-     * @Assert\Choice(
-     *     choices = {"Mariee", "Celibataire", "Compliqué"  }
-     *     message = "Choose a valid choice Mariee, Celibataire, Compliqué."
-     * )
+     * 
+     * @var string
      */
     private $statusMatrimonial;
 

@@ -1,6 +1,4 @@
 <?php
-// src/MyProject/MyBundle/Entity/Rating.php
-
 namespace sprint2\realEstateBundle\Entity;
 
 use DCS\RatingBundle\Entity\Rating as BaseRating;
