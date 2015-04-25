@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "6b87fd9fe36e7114a9b1a5a08c0119ef",
+    "hash": "e3f98f83ad2acee3b85cb32058465bbd",
     "packages": [
         {
             "name": "braincrafted/bootstrap-bundle",
@@ -1823,16 +1823,16 @@
         },
         {
             "name": "sensiolabs/security-checker",
-            "version": "v2.0.1",
+            "version": "v2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensiolabs/security-checker.git",
-                "reference": "134cecf1c61256bd8e973e11376891a724543820"
+                "reference": "cecb1397087dc9c733796eda6e9d121336039cdc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/security-checker/zipball/134cecf1c61256bd8e973e11376891a724543820",
-                "reference": "134cecf1c61256bd8e973e11376891a724543820",
+                "url": "https://api.github.com/repos/sensiolabs/security-checker/zipball/cecb1397087dc9c733796eda6e9d121336039cdc",
+                "reference": "cecb1397087dc9c733796eda6e9d121336039cdc",
                 "shasum": ""
             },
             "require": {
@@ -1864,7 +1864,7 @@
                 }
             ],
             "description": "A security checker for your composer.lock",
-            "time": "2015-01-26 16:25:19"
+            "time": "2015-04-21 07:52:05"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -2045,16 +2045,15 @@
         {
             "name": "symfony/serializer",
             "version": "dev-master",
-            "target-dir": "Symfony/Component/Serializer",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Serializer.git",
-                "reference": "698e78b6bfd24c59f332ce47d6e0ced694157c17"
+                "reference": "950784b6530947f8f062d3ce8f19e4f261fc71d3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Serializer/zipball/698e78b6bfd24c59f332ce47d6e0ced694157c17",
-                "reference": "698e78b6bfd24c59f332ce47d6e0ced694157c17",
+                "url": "https://api.github.com/repos/symfony/Serializer/zipball/950784b6530947f8f062d3ce8f19e4f261fc71d3",
+                "reference": "950784b6530947f8f062d3ce8f19e4f261fc71d3",
                 "shasum": ""
             },
             "require": {
@@ -2082,7 +2081,7 @@
                 }
             },
             "autoload": {
-                "psr-0": {
+                "psr-4": {
                     "Symfony\\Component\\Serializer\\": ""
                 }
             },
@@ -2102,7 +2101,7 @@
             ],
             "description": "Symfony Serializer Component",
             "homepage": "http://symfony.com",
-            "time": "2015-04-10 07:31:54"
+            "time": "2015-04-24 07:12:41"
         },
         {
             "name": "symfony/swiftmailer-bundle",

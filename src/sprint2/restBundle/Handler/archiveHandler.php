@@ -40,6 +40,12 @@ class archiveHandler
      */
     public function getAll($limit = 5, $offset = 0)
     {
-        return $this->repository->findAll();
+        return $this->repository->findBy(array(), null, $limit, $offset);
+    }
+
+    public function getByGov($gouvernorat){
+        
+        return $this->repository->findBy(array('gouvernorat'=>$gouvernorat));
+
     }
 }
