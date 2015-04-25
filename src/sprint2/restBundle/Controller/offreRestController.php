@@ -111,7 +111,7 @@ class offreRestController extends FosRestController
      *   description = "Creates a new offre from the submitted data.",
      *   input = "sprint2\realEstateBundle\Form\OffreType",
      *   statusCodes = {
-     *     200 = "Returned when successful",
+     *     201 = "Returned when successful",
      *     400 = "Returned when the form has errors"
      *   }
      * )
@@ -140,6 +140,41 @@ class offreRestController extends FosRestController
             );
             return $this->routeRedirectView('get_offre', $routeOptions, Codes::HTTP_CREATED);
        
+    }
+
+    /**
+     * delete an Offre from the submitted data.
+     *
+     * @ApiDoc(
+     *   resource = true,
+     *   description = "Creates a new offre from the submitted data.",
+     *   input = "id",
+     *   statusCodes = {
+     *     200 = "Returned when successful",
+     *     400 = "Returned when the form has errors"
+     *   }
+     * )
+     *
+     * @Annotations\View(
+     *  template = "sprint2restBundle:Default:index.html.twig",
+     *  statusCode = Codes::HTTP_BAD_REQUEST,
+     *  templateVar = "form"
+     * )
+     *
+     * @param Request $request the request object
+     *
+     * @return FormTypeInterface|View
+     */
+
+
+    public function deleteOffreAction($id)
+    {
+    	
+
+    	$this->container->get('rest.offre.handler')->delete(
+                $id
+            );
+    	return new Response(Codes::HTTP_OK);
     }
 
 

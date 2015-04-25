@@ -30,3 +30,7 @@ sprint2rest:
     resource: "@sprint2restBundle/Resources/config/routing.yml"
     prefix:   /api
     type: rest
+
+NelmioApiDocBundle:
+    resource: "@NelmioApiDocBundle/Resources/config/routing.yml"
+    prefix:   /api/doc

@@ -40,7 +40,7 @@ class offreHandler
      */
     public function getAll($limit = 5, $offset = 0)
     {
-        return $this->repository->findAll();
+        return $this->repository->findBy(array(), null, $limit, $offset);
     }
 
     /**
@@ -53,6 +53,18 @@ class offreHandler
     public function get($id)
     {
         return $this->repository->find($id);
+    }
+
+
+    public function delete($id){
+           
+            $entity = $this->om->getRepository('realEstateBundle:Offre')->find($id);
+            $this->om->remove($entity);
+            $this->om->flush();
+
+            
+
+        
     }
 
      /**
