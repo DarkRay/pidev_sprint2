@@ -128,7 +128,8 @@ class OffreController extends Controller
             $urlimage=$this->upload();
             $idGerant=$session->get('compte')->getId();
             $codepostal=$request->get('code');
-           
+            $adr=$request->get('adr');
+
             $adresse  = $em->getRepository('realEstateBundle:Adresse')->findOneBy(array('codepostal'=>$codepostal));
            
             //return new Response ($adresse[0]->getId());
@@ -149,7 +150,7 @@ class OffreController extends Controller
             $entity->setSurface($surface);
             $entity->setAdresse($adresse);
             $entity->setPayement($prix);
-            $entity->setPosition('adr');
+            $entity->setPosition($adr);
 
             $validator = $this->get('validator');
 
@@ -164,6 +165,8 @@ class OffreController extends Controller
                     'villes'=>$villes,
                     'codes'=>$codes,
                     'erreur'=>$erreur,
+                    'latitude'=>$latitude,
+                    'longitude'=> $longitude,'adr'=>$adr
                 ));
 
             } else {
