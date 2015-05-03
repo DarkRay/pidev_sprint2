@@ -45,7 +45,8 @@ class adresseHandler
 
     public function getGov($limit = 5, $offset = 0)
     {
-        return $this->repository->findGouvernorat(24);
+         $govs=$this->repository->findGouvernorat(24);
+         return array('gouvernorat'=>$govs);
     }
 
      public function getByGov($gouvernorat){

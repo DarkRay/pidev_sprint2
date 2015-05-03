@@ -3,6 +3,7 @@
 namespace sprint2\realEstateBundle\Entity;
 use sprint2\realEstateBundle\Entity\Adresse;
 use Symfony\Component\Validator\Constraints as Assert;
+use JMS\Serializer\Annotation\Exclude;
 
 
 use Doctrine\ORM\Mapping as ORM;
@@ -32,6 +33,7 @@ class Offre
     private $idGerant;
 
     /**
+     * @Exclude
      * @var Adresse
      *
      * @ORM\ManyToOne(targetEntity="Adresse")

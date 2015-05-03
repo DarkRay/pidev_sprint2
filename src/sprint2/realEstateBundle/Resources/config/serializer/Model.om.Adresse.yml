@@ -1,0 +1,7 @@
+## YAML Template.
+---
+sprint2\realEstateBundle\Model\om\Adresse:
+    exclusion_policy: ALL
+    properties:
+        id:
+            expose: true

@@ -167,11 +167,11 @@ class offreRestController extends FosRestController
      */
 
 
-    public function deleteOffreAction($id)
+    public function postOOffreAction($id)
     {
     	
 
-    	$this->container->get('rest.offre.handler')->delete(
+    	$this->container->get('rest.offre.handler')->postO(
                 $id
             );
     	return new Response(Codes::HTTP_OK);
