@@ -43,6 +43,8 @@ class offreHandler
         return $this->repository->findBy(array(), null, $limit, $offset);
     }
 
+    
+
     /**
      * Get an offre.
      *
@@ -56,7 +58,7 @@ class offreHandler
     }
 
 
-    public function delete($id){
+    public function postO($id){
            
             $entity = $this->om->getRepository('realEstateBundle:Offre')->find($id);
             $this->om->remove($entity);
@@ -106,13 +108,14 @@ class offreHandler
             $cuis=$request->get('Cuisine');
             $jar=$request->get('Jardin');
             $acc=$request->get('Acces');
-            $gaz=$request->get('Gaz');
+            $gaz=$request->get('gazDeVille');
             $chauf=$request->get('Chauffage');
             $meuble=$request->get('Meuble');
-            $clim=$request->get('Climatise');
+            $clim=$request->get('climatisation');
             $urlimage=$request->get('urlImage');
             $idGerant=$request->get('id_gerant');
             $codepostal=$request->get('code');
+            $description=$request->get('description');
            
             $adresse  =  $this->om->getRepository('realEstateBundle:Adresse')->findOneBy(array('codepostal'=>$codepostal));
            
@@ -134,6 +137,7 @@ class offreHandler
             $offre->setSurface($surface);
             $offre->setAdresse($adresse);
             $offre->setPayement($prix);
+            $offre->setDescription($description);
             $offre->setPosition("48.829677,2.331086");
 
       

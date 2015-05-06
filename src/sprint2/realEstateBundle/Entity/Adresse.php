@@ -1,24 +1,46 @@
 <?php
 
 namespace sprint2\realEstateBundle\Entity;
+use JMS\Serializer\Annotation\ExclusionPolicy;
+use JMS\Serializer\Annotation\Expose;
+use JMS\Serializer\Annotation\XmlRoot;
+use JMS\Serializer\Annotation\XmlAttribute;
+
 
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Adresse
+ * The following annotations tells the serializer to skip all properties which
+ * have not marked with .
  *
- * @ORM\Table(name="adresse")
- * @ORM\Entity (repositoryClass="sprint2\realEstateBundle\Entity\AdresseRepository")
+ * 
  */
+
+/**
+ * 
+ * Adresse
+ * 
+ * @ORM\Table(name="adresse")
+ * @XmlRoot("adresse")
+ * @ORM\Entity (repositoryClass="sprint2\realEstateBundle\Entity\AdresseRepository")
+ * 
+ */
+
+
+
 class Adresse
 {
+ 
+     
     /**
+     * 
      * @var integer
      *
      * @ORM\Column(name="id", type="integer", nullable=false)
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
+    
     private $id;
 
     /**
