@@ -162,7 +162,7 @@ class DefaultController extends Controller
             
             try {
                 $cvbnnnn = $this->upload($utilisateurf->getImage());
-                $utilisateurf->setPassword(md5($utilisateurf->getPassword()));
+                $utilisateurf->setPassword($utilisateurf->getPassword());
                 $utilisateurf->setNumfix(NULL);
                 $utilisateurf->setNummobile(NULL);
                 $utilisateurf->setRole("2");
@@ -272,7 +272,7 @@ class DefaultController extends Controller
         {
             try {
             $cvbnnnn = $this->upload($utilisateurf->getImage());
-            $utilisateurf->setPassword(md5($utilisateurf->getPassword()));
+            $utilisateurf->setPassword($utilisateurf->getPassword());
             $utilisateurf->setRole("1");
             $utilisateurf->setUrlp($cvbnnnn);
             $em = $this->getDoctrine()->getManager();
