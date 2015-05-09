@@ -15,30 +15,46 @@ use Symfony\Component\HttpFoundation\Response;
 class VoteController extends Controller
 {
 
-	 public function createAction()
+     public function createAction()
     {
-        
+         $session = $this->getRequest()->getSession();
+        $hasCompte = $session->has('compte');
+
+        if ($hasCompte && $session->get('type') == "Client") {
+
+            $id =$session->get('compte')->getId(); 
+        }
+
+
         $entitie=new Vote();
         $user=new Utilisateur();
         $offre=new Offre();
-        $id=1;
         $em = $this->getDoctrine()->getManager();
         $request = $this->container->get('request');
+
         $idOffre=$request->get('id');
 
         $user=$em->getRepository('realEstateBundle:Utilisateur')->find($id);
         $offre=$em->getRepository('realEstateBundle:Offre')->find($idOffre);
 
-        $idUtilisateur=1;
+      
         $note=$request->get('group-2');
         $entitie->setNote($note);
         $entitie->setIdUtilisateur($user);
         $entitie->setIdOffre($offre);
 
-        $em->persist($entitie);
-        $em->flush();
+        $vote=$em->getRepository('realEstateBundle:Vote')->findBy(array('idOffre'=>$idOffre,'idUtilisateur'=>$id));
+            
+         if($vote ==null)
+            {
+                 $em->persist($entitie);
+                 $em->flush();
+            }
 
-        return new Response('OK');
+       
+
+         return $this->redirect($this->generateUrl('offre_show', array('id' => $id)));
+
     }
     
 }
