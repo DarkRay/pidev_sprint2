@@ -206,23 +206,36 @@ class OffreController extends Controller
         
         $gerant=$em->getRepository('sprint2RealEstateAdminBundle:Utilisateur')->find($entity->getIdGerant());
 
-        
-        $idUser =1; //normalement m session
-        $countNbOffr=0;
+        $idUser=0;
+
+        $session = $this->getRequest()->getSession();
+        $hasCompte = $session->has('compte');
+        if ($hasCompte && $session->get('type') == "Client") {
+        $idUser =$session->get('compte')->getId(); //normalement m session
+        }
+
+        $countNbOffre=0;
 
         // nombre de vote
         $qb =  $em->createQueryBuilder();
         $qb->select('count(Vote.idOffre)');
         $qb->from('realEstateBundle:Vote','Vote');
-        $countNbOffre = $qb->getQuery()->getSingleScalarResult();
-        if($countNbOffre==0)
-            $countNbOffre=1;
-        //note
-        $qb->select('SUM(V.note)');
-        $qb->from('realEstateBundle:Vote','V');
-        $qb->where('V.idOffre = :id');
+        $qb->where('Vote.idOffre = :id');
         $qb->setParameter('id', $id);
-        $note = $qb->getQuery()->getSingleScalarResult();
+        $countNbOffre = $qb->getQuery()->getSingleScalarResult();
+
+        
+        //note
+        $qb1= $em->createQueryBuilder();
+        $qb1->select('SUM(V.note)');
+        $qb1->from('realEstateBundle:Vote','V');
+        $qb1->where('V.idOffre = :id');
+        $qb1->setParameter('id', $id);
+        $note = $qb1->getQuery()->getSingleScalarResult();
+
+        if($countNbOffre==0)
+            $note=0;
+        else
         $note=$note/$countNbOffre;
 
         $vote=$em->getRepository('realEstateBundle:Vote')->findBy(array('idOffre'=>$id,'idUtilisateur'=>$idUser));
